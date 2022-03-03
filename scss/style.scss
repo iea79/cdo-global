@@ -247,5 +247,62 @@
             }
         }
     }
+}
+
+.prefooter {
+    padding: 3em 0 1.5em;
+    background: radial-gradient(38.6% 73.42% at 50.76% 50%, #F7F7F7 0%, #EDEDED 100%);
+
+    @media (min-width: 768px) {
+        padding: 10.8125em 0 12.9375em;
+    }
+
+    &__contact {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__col {
+        margin-bottom: 1.5em;
+
+        @media (min-width: 768px) {
+            width: 50%;
+            padding-right: 8em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__city {
+        font-weight: 500;
+        font-size: 1.625em;
+        line-height: 1.4;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 0.75em;
+    }
+
+    &__items {
+        font-weight: 500;
+        font-size: 1.125em;
+        line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        a,
+        span {
+            margin: 0 0 0.25em;
+            color: $main_color;
+        }
+
+        a {
+            text-decoration-color: transparent;
+
+            &:hover {
+                text-decoration-color: inherit;
+            }
+        }
+    }
 
 }

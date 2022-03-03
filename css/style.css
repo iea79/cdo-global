@@ -2382,3 +2382,57 @@ html[data-browser*=flexible] .grid_nowrap {
 .circuSolutions__plateList li:last-child {
   margin-bottom: 0;
 }
+
+.prefooter {
+  padding: 3em 0 1.5em;
+  background: radial-gradient(38.6% 73.42% at 50.76% 50%, #F7F7F7 0%, #EDEDED 100%);
+}
+@media (min-width: 768px) {
+  .prefooter {
+    padding: 10.8125em 0 12.9375em;
+  }
+}
+@media (min-width: 768px) {
+  .prefooter__contact {
+    display: flex;
+  }
+}
+.prefooter__col {
+  margin-bottom: 1.5em;
+}
+@media (min-width: 768px) {
+  .prefooter__col {
+    width: 50%;
+    padding-right: 8em;
+    margin-bottom: 0;
+  }
+}
+.prefooter__city {
+  font-weight: 500;
+  font-size: 1.625em;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.75em;
+}
+.prefooter__items {
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.prefooter__items a,
+.prefooter__items span {
+  margin: 0 0 0.25em;
+  color: #2B2C34;
+}
+.prefooter__items a {
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+}
+.prefooter__items a:hover {
+  -webkit-text-decoration-color: inherit;
+          text-decoration-color: inherit;
+}
