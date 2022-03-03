@@ -196,3 +196,36 @@ block content
                     .circuSolutions__plate(data-plate="sol-11")
 
     // end circuSolutions
+
+    // begin interest
+    section#interest.interest.section
+        .container_center
+            h2.section__title Вас может заинтересовать
+
+            .sliderTripple
+                each item, i in ['ИС управление приемной компанией и настройке ЛК', 'ИС управление приемной компанией и настройке ЛК', 'ИС управление приемной компанией и настройке ЛК', 'ИС управление приемной компанией и настройке ЛК']
+                    a.evensNews__slide(href="#")
+                        .evensNews__img
+                            img(src="img/event-"+(i+1)+".jpg", alt="")
+                        .evensNews__name!=item
+
+    // end interest
+
+    // begin prefooter
+    .prefooter
+        .container_center
+            .prefooter__contact
+                .prefooter__col
+                    .prefooter__city Москва
+                    .prefooter__items
+                        a(href="tel: +7 (495) 777-37-93") +7 (495) 777-37-93
+                        a(href="mailto: info@cdo-global.ru") info@cdo-global.ru
+                        span 119019, г. Москва, ул. Новый Арбат, д.11, стр.1, офис. 23
+                .prefooter__col
+                    .prefooter__city Рязань
+                    .prefooter__items
+                        a(href="tel: +7 (495) 777-37-93") +7 (495) 777-37-93
+                        a(href="mailto: info@cdo-global.ru") info@cdo-global.ru
+                        span 119019, г. Москва, ул. Новый Арбат, д.11, стр.1, офис. 23
+
+    // end prefooter
