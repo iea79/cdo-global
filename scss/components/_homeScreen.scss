@@ -1,0 +1,227 @@
+.homeScreen {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &__top {
+        padding: 2em 0 0.5em;
+        background: radial-gradient(38.6% 73.42% at 50.76% 50%, #F7F7F7 0%, #EDEDED 100%);
+
+        @media (min-width: 768px) {
+            padding: 3.5em 0 6.75em;
+        }
+    }
+
+    &__clip {
+        height: 11em;
+        position: relative;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            height: 24.4375em;
+            margin-right: -2.5em;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 39.8125em;
+            height: 37.125em;
+            background: url("../img/home-ellips.svg") left 2.09em top -3em no-repeat;
+            background-size: 38.77em 42.77em;
+            top: -3.9em;
+            right: 0;
+        }
+    }
+
+    &__video {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        // background: #1B3149;
+
+        @media (min-width: 768px) {
+            height: 27.55em;
+        }
+
+        img,
+        video {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            clip-path: url("#clipping");
+        }
+
+        img {
+            object-position: left center;
+        }
+    }
+
+    .clip-svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        path {
+            transform: scale(0.00103, 0.0025);
+
+            @media (min-width: 768px) {
+                transform: scale(0.00103, 0.00227);
+            }
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        flex: none;
+        padding-bottom: 1.5em;
+
+        @media (min-width: 768px) {
+            margin-right: 1em;
+            margin-left: -0.2em;
+            width: 43.96em;
+        }
+    }
+
+    &__title {
+        flex: none;
+        margin: 0 0 0.6em;
+        font-size: 2.4em;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        line-height: 1.48;
+
+        @media (min-width: 768px) {
+            font-size: 3em;
+        }
+    }
+
+    &__sub {
+        font-size: 1.25em;
+
+        @media (min-width: 768px) {
+            font-size: 1.625em;
+        }
+    }
+
+    &__right {
+        // width: 57.8em;
+
+        @media (min-width: 768px) {
+            flex: none;
+            width: 57.8em;
+            margin-right: 0;
+        }
+    }
+
+    &__points {
+        margin: 2.4em 0 0;
+        position: relative;
+        z-index: 2;
+
+        @media (min-width: 768px) {
+            display: flex;
+            margin: 2.4em -0.5em 0;
+        }
+    }
+
+    &__point {
+        margin: 0 0 1em;
+        background: #74D414;
+        color: $color_withe;
+        text-align: center;
+        padding: 3em 1.27em;
+
+        @media (min-width: 768px) {
+            padding: 3.64em 1.27em 1.98em;
+            margin: 0 0.5em;
+            width: calc(20% - 1em);
+        }
+    }
+
+    &__num {
+        font-size: 3.5em;
+        line-height: 1;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.18em;
+    }
+
+    &__descr {
+        font-size: 1.125em;
+        line-height: 1.5;
+    }
+
+    &__bottom {
+        padding: 4em 0;
+
+        @media (min-width: 768px) {
+            padding: 6.875em 0 3.125em;
+        }
+    }
+
+    &__description {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__text {
+
+        @media (min-width: 768px) {
+            flex: none;
+            width: 46.5625em;
+            margin-right: 7.36em;
+        }
+
+        p {
+            font-size: 1.125em;
+            margin: 1.9em 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__list {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-bottom: 1.1em;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                img {
+                    flex: none;
+                    margin-right: 1.3em;
+                }
+
+                span {
+                    font-weight: 500;
+                    font-size: 1.125em;
+                }
+            }
+        }
+    }
+
+}

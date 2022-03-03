@@ -15,89 +15,145 @@
  *
  */
 
- var app = {
-     pageScroll: '',
-     lgWidth: 1200,
-     mdWidth: 992,
-     smWidth: 768,
-     resized: false,
-     iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-     touchDevice: function() { return navigator.userAgent.match(/iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i); }
- };
+var app = {
+    pageScroll: '',
+    lgWidth: 1200,
+    mdWidth: 992,
+    smWidth: 768,
+    resized: false,
+    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+    touchDevice: function() { return navigator.userAgent.match(/iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i); }
+};
 
- function isLgWidth() { return $(window).width() >= app.lgWidth; } // >= 1200
- function isMdWidth() { return $(window).width() >= app.mdWidth && $(window).width() < app.lgWidth; } //  >= 992 && < 1200
- function isSmWidth() { return $(window).width() >= app.smWidth && $(window).width() < app.mdWidth; } // >= 768 && < 992
- function isXsWidth() { return $(window).width() < app.smWidth; } // < 768
- function isIOS() { return app.iOS(); } // for iPhone iPad iPod
- function isTouch() { return app.touchDevice(); } // for touch device
+function isLgWidth() { return $(window).width() >= app.lgWidth; } // >= 1200
+function isMdWidth() { return $(window).width() >= app.mdWidth && $(window).width() < app.lgWidth; } //  >= 992 && < 1200
+function isSmWidth() { return $(window).width() >= app.smWidth && $(window).width() < app.mdWidth; } // >= 768 && < 992
+function isXsWidth() { return $(window).width() < app.smWidth; } // < 768
+function isIOS() { return app.iOS(); } // for iPhone iPad iPod
+function isTouch() { return app.touchDevice(); } // for touch device
 
 
- window.onload = () => {
+window.onload = () => {
      // Запрет "отскока" страницы при клике по пустой ссылке с href="#"
-     document.querySelectorAll('[href="#"]').forEach((item, i) => {
-         item.addEventListener('click', e => {
-             e.preventDefault();
-         });
-     });
+    document.querySelectorAll('[href="#"]').forEach((item, i) => {
+        item.addEventListener('click', e => {
+            e.preventDefault();
+        });
+    });
 
-     // Inputmask.js
-     // $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
-     // formSubmit();
+    // Inputmask.js
+    // $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
+    // formSubmit();
 
-     checkOnResize();
- };
+    checkOnResize();
 
- window.addEventListener('resize', () => {
+    $('.sliderTripple').slick({
+        dots: false,
+        infinite: false,
+        arrows: true,
+        nextArrow: '<button class="slick-next"></button>',
+        prevArrow: '<button class="slick-prev"></button>',
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
+    });
+};
+
+window.addEventListener('resize', () => {
      // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
-     if (app.resized == screen.width) { return; }
-     app.resized = screen.width;
+    if (app.resized == screen.width) { return; }
+    app.resized = screen.width;
 
-     console.log('resize');
+    console.log('resize');
 
-     checkOnResize();
- });
+    checkOnResize();
+});
 
- function checkOnResize() {
- }
+function checkOnResize() {
+    replaceHeaderElems();
+    replaceSolutionsTabs();
+}
 
- // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
- function stikyMenu() {
-     const header = document.querySelector('.header');
+// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
+function stikyMenu() {
+    const header = document.querySelector('.header');
 
-     setNavbarPosition();
+    setNavbarPosition();
 
-     window.addEventListener('scroll', () => {
-         setNavbarPosition();
-     });
+    window.addEventListener('scroll', () => {
+        setNavbarPosition();
+    });
 
-     function setNavbarPosition() {
+    function setNavbarPosition() {
 
-         if ( window.scrollY > header.clientTop ) {
-             header.classList.add('stiky');
-         } else {
-             header.classList.remove('stiky');
-         }
+        if ( window.scrollY > header.clientTop ) {
+            header.classList.add('stiky');
+        } else {
+            header.classList.remove('stiky');
+        }
+    }
+}
+// stikyMenu();
 
-     }
- }
- stikyMenu();
+function openMobileNav() {
+    document.querySelector('.navbar__toggle').addEventListener('click', ev => {
+        document.querySelector('.nav').classList.toggle('open');
+        document.body.classList.toggle('navbar__open');
+        ev.target.classList.toggle('active');
+    });
+}
+openMobileNav();
 
- function openMobileNav() {
-     document.querySelector('.navbar__toggle').addEventListener('click', ev => {
-         document.querySelector('.nav').classList.toggle('open');
-         document.body.classList.toggle('navbar__open');
-         ev.target.classList.toggle('active');
-     });
- }
- openMobileNav();
+function replaceHeaderElems() {
+    const content = document.querySelector('.header__content');
+    const contacts = document.querySelector('.header__right');
+    const nav = document.querySelector('.header__nav');
+
+    if (isXsWidth()) {
+        nav.appendChild(contacts);
+    } else {
+        content.appendChild(contacts);
+    }
+}
+
+function replaceSolutionsTabs() {
+    const wrap = $('.circuSolutions__right');
+    const plate = $('.circuSolutions__plate');
+    const tab = $('.circuSolutions__tab');
+    let id;
+
+    plate.each(function(i, el) {
+        id = $(el).data('plate');
+        if (isXsWidth()) {
+            $(el).insertAfter('[data-tab="'+id+'"]');
+        } else {
+            $(el).appendTo(wrap);
+        }
+    });
+
+    tab.on('click', function() {
+        if (isXsWidth()) {
+            this.scrollIntoView({behavior: "smooth"});
+        }
+    });
+}
 
  // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
  function srollToId() {
      const el = document.querySelectorAll('[data-scroll-to]');
      el.forEach((item, i) => {
          item.addEventListener('click', e => {
-             console.log(e.target.href);
+             // console.log(e.target.href);
              document.body.classList.remove('navbar__open');
              document.querySelector('.nav').classList.remove('open');
              document.querySelector('.navbar__toggle').classList.remove('active');
@@ -131,6 +187,9 @@ function toggleTabs() {
         $(self).addClass('active');
         $('[data-plate]').removeClass('active');
         $('[data-plate='+self.dataset.tab+']').addClass('active');
+        if ($('[data-plate='+self.dataset.tab+']').hasClass('slick-slider')) {
+            $('[data-plate].active').slick('refresh');
+        }
     });
 }
 toggleTabs();

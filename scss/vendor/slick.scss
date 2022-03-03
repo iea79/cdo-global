@@ -106,3 +106,90 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick {
+    &-slider {
+        margin: 2em -1em;
+        overflow: hidden;
+
+        @media (min-width: 768px) {
+            overflow: inherit;
+            margin: 1.8125em 0;
+        }
+    }
+
+    &-slide {
+        padding: 0 1em;
+        @media (min-width: 768px) {
+            padding: 0 0 0 1.875em;
+        }
+    }
+
+    &-list {
+        padding: 0 3em 0 0;
+
+        @media (min-width: 768px) {
+            margin: 0 0 0 -1.875em;
+            padding: 0;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 1.875em;
+                position: absolute;
+                background-color: #F3F3F3;
+                top: 0;
+                bottom: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    &-current {}
+
+    &-arrow {
+        position: absolute;
+        border: none;
+        // font-size: 0;
+        background-color: transparent;
+        width: 5.4em;
+        height: 1em;
+        top: -5.5em;
+        cursor: pointer;
+        transition: opacity 0.3s;
+        background: url("../img/arrow.svg") right center no-repeat;
+        background-size: contain;
+        z-index: 2;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:before {}
+
+        &:after {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &-next {
+        right: 0;
+
+        &:before {}
+    }
+
+    &-prev {
+        right: 10em;
+        transform: rotate(180deg);
+
+        &:before {}
+    }
+
+    &-dots {
+        li {
+            &.slick-active {}
+
+            button {}
+        }
+    }
+}

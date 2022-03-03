@@ -1,10 +1,23 @@
 header.header
     .header__content
-        .header__left
+        .header__logo
             a.logo(href="/")
-                img(src="img/logo.png", alt="alt")
-        nav.header__right
+                img(src="img/logo.svg", alt="CDO")
+        .navbar__toggle
+        nav.nav.header__nav
             ul.navbar
-                each navLink in [{name: 'Page1', href: ''},{name: 'Page2', href: ''},{name: 'Page3', href: ''},{name: 'Page4', href: ''},]
+                each navLink in [{name: 'О нас', href: ''},{name: 'Продукты', href: ''},{name: 'Услуги', href: ''},{name: 'Проекты', href: ''},{name: 'Новости', href: ''},{name: 'Контакты', href: ''}]
                     li.navbar__item
                         a.navbar__link(href= navLink.href)= navLink.name
+
+        .header__right
+            .header__soc
+                .soc
+                    a(href="#", target="_blank")
+                        img(src="img/facebook.svg", alt="")
+                    a(href="#", target="_blank")
+                        img(src="img/insta.svg", alt="")
+            a.header__print(href="#") Напишите нам
+            a.header__tel(href="tel: +7 (495) 777-37-93") +7 (495) 777-37-93
+            .header__partner.desktop
+                img(src="img/1c.svg", alt="")

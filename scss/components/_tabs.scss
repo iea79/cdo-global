@@ -1,0 +1,50 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 1.3em;
+
+    &__item {
+        font-size: 1.375em;
+        line-height: 1.2;
+        margin-right: 1.5em;
+        color: #2B2C34;
+        transition: color 0.3s;
+        cursor: pointer;
+        user-select: none;
+
+        @media (min-width: 768px) {
+            margin-right: 2.63em;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            margin-top: 0.1em;
+            border-top: 1px solid;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            color: #74D414;
+        }
+
+        &.active {
+            color: #74D414;
+            cursor: default;
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__pane {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+}

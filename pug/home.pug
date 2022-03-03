@@ -1,0 +1,198 @@
+extends layout/layout.pug
+
+block content
+    // begin homeScreen
+    section#homeScreen.homeScreen.section
+        .homeScreen__top
+            .container_center
+                .homeScreen__content
+                    .homeScreen__left
+                        h1.homeScreen__title Цифровой интегратор
+                        .homeScreen__sub Делаем более доступным и удобным освоение любых знаний и навыков для самореализации любого человека, независимо от способностей и географии
+                    .homeScreen__right
+                        .homeScreen__clip
+                            <svg class="clip-svg">
+                                <clipPath id="clipping" clipPathUnits="objectBoundingBox">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M272.216 136.856L260.007 124.61C242.747 107.296 216.573 95.6779 190.867 95.6779C159.608 95.6779 135.499 106.76 119.131 124.227C102.637 141.828 92.8616 167.153 92.8616 197.439C92.8616 259.368 136.037 299.2 190.867 299.2C216.573 299.2 242.747 287.581 260.007 270.268L272.216 258.022L337.232 323.239L325.099 335.41C291.582 369.03 243.209 391.478 190.867 391.478C86.8368 391.478 0.761719 316.153 0.761719 197.439C0.761719 86.4172 79.1686 3.39995 190.867 3.39995C243.209 3.39995 291.582 25.8478 325.099 59.4679L337.232 71.6389L272.216 136.856ZM353.274 6.80003H428.135C469.642 6.80003 523.598 11.8771 567.591 38.6356C613.123 66.3309 645.357 115.611 645.357 197.439C645.357 277.497 614.039 326.707 569.046 354.854C525.491 382.1 471.527 388.078 428.135 388.078H353.274V6.80003ZM553.256 194.249V194.039C553.256 163.184 545.246 142.858 534.628 129.165C523.901 115.331 509.348 106.771 493.848 101.588C478.271 96.3798 462.366 94.8084 450.104 94.6132C448.446 94.5868 446.866 94.5857 445.374 94.6033V296.837C446.99 296.853 448.71 296.848 450.519 296.813C463.045 296.568 479.243 294.898 495.004 289.504C510.682 284.138 525.284 275.327 535.86 261.139C546.336 247.086 554.033 226.193 553.261 194.458L553.256 194.249ZM943.636 295.8V388.078H682.059V295.8H943.636ZM960.584 146.439C960.584 227.31 895.293 292.878 814.542 292.878C733.791 292.878 668.501 227.31 668.501 146.439C668.501 65.5682 733.791 0 814.542 0C895.293 0 960.584 65.5682 960.584 146.439ZM868.483 146.439C868.483 115.11 845.646 92.2779 814.542 92.2779C786.828 92.2779 760.601 118.51 760.601 146.439C760.601 177.768 783.438 200.6 814.542 200.6C845.646 200.6 868.483 177.768 868.483 146.439Z" fill="black"/>
+                                </clipPath>
+                            </svg>
+                            .homeScreen__video
+                                video(src="video/cdo.mp4" autoplay mute loop)
+
+                .homeScreen__points
+                    each item in [{num: '12', text: 'Лет работаем <br>с образованием'}, {num: '2', text: 'Место по России <br>в рейтинге ЦКО'}, {num: '4', text: 'Собственных продукта'}, {num: '110', text: 'Образовательных <br>учреждений нам доверяют'}, {num: '140', text: 'Проектов ежегодно'}]
+                        .homeScreen__point
+                            .homeScreen__num=item.num
+                            .homeScreen__descr!=item.text
+        .homeScreen__bottom
+            .container_center
+                .homeScreen__description
+                    .homeScreen__text
+                        p CDO Global – отечественная IT-компания, использующая весь стек технологий для любых образовательных организаций. Более 10 лет опыта и сотни успешных проектов позволяют решать самые сложные задачи. Наши продукты, проверенные миллионами пользователей, позволят быстро и легко процессы сделать цифровыми, знания - доступными.
+                        p CDO Global – отечественная IT-компания, использующая весь стек технологий для любых образовательных организаций. Более 10 лет опыта и сотни успешных проектов позволяют решать самые сложные задачи. Наши продукты, проверенные миллионами пользователей, позволят быстро и легко процессы сделать цифровыми, знания - доступными.
+
+                    .homeScreen__list
+                        ul
+                            each item, i in ['Центр компетенции  по образованию', 'Участник IT-кластера', 'Включены в реестр Минсвязи и массовых коммуникаций РФ', 'Лицензиат ФСБ', 'Официальный партнер 1С-Битрикс и 1С']
+                                li
+                                    img(src="img/home-list-"+(i+1)+".svg", alt="")
+                                    span!=item
+
+    // end homeScreen
+
+    // begin ourClients
+    section#ourClients.ourClients.section
+        .container_center
+            h2.section__title.section__title_sm Нам доверяют свое совершенствование
+            .ourClients__list
+                each item in [1,2,3,4,5]
+                    .ourClients__item
+                        img(src="img/client-"+item+".png", alt="")
+
+    // end ourClients
+
+    // begin evensNews
+    .evensNews
+        .container_center
+            .evensNews__head
+                .tabs
+                    .tabs__item.active(data-tab="news") Новости
+                    .tabs__item(data-tab="events") События
+
+            .sliderTripple.tabs__pane.active(data-plate="news")
+                each item, i in ['CDO запустили новый сервис для университетов', 'CDO стали официальными партнерами 1с!', 'Остановка работы серверов 1С', 'CDO запустили новый сервис для университетов']
+                    a.evensNews__slide(href="#")
+                        .evensNews__img
+                            img(src="img/event-"+(i+1)+".jpg", alt="")
+                        .evensNews__name!=item
+                        .evensNews__text ЭИОС - Электронная информационно-образовательная среда включает...
+                        .evensNews__more Подробнее
+
+            .sliderTripple.tabs__pane(data-plate="events")
+                each item, i in ['CDO запустили новый сервис для университетов', 'CDO стали официальными партнерами 1с!', 'Остановка работы серверов 1С', 'CDO запустили новый сервис для университетов']
+                    a.evensNews__slide(href="#")
+                        .evensNews__img
+                            img(src="img/event-"+(i+1)+".jpg", alt="")
+                        .evensNews__name!=item
+                        .evensNews__text ЭИОС - Электронная информационно-образовательная среда включает...
+                        .evensNews__more Подробнее
+
+    // end evensNews
+
+    // begin weOffer
+    section#weOffer.weOffer.section
+        .container_center
+            h2.section__title Мы предлагаем
+            .weOffer__list
+                each offer, i in ['АУДИТ', '1с-разработка', 'Web-разработка', 'Moodle-разработка', 'МОБИЛЬНАЯ разработка', 'Сопровождение', 'Консалтинг', 'Кибер-безопасность', 'Нейросети']
+                    a.weOffer__item(href="#")
+                        .weOffer__img
+                            img(src="img/offer-"+(i+1)+".svg", alt="")
+                        .weOffer__name=offer
+                        .weOffer__more Подробнее
+
+    // end weOffer
+
+    // begin circuSolutions
+    section#circuSolutions.circuSolutions.section
+        .container_center
+            h2.section__title Тиражные решения
+            .circuSolutions__list
+                each item, i in ['Электронная Информационная Образовательная Среда', 'Мобильное приложение', 'Электронная Приемная Комиссия', 'Портал Сотрудника']
+                    a.circuSolutions__item(href="#")
+                        .circuSolutions__img
+                            img(src="img/solitions-"+(i+1)+".svg", alt="")
+                        .circuSolutions__text!=item
+
+            .circuSolutions__tabs
+                .circuSolutions__left
+                    .circuSolutions__tab.active(data-tab="sol-1") Вузы
+                    .circuSolutions__tab(data-tab="sol-2") Работа с абитуриентами
+                    .circuSolutions__tab(data-tab="sol-3") Дистанционное обучение
+                    .circuSolutions__tab(data-tab="sol-4") Аудит сайта
+                    .circuSolutions__tab(data-tab="sol-5") Документооборот
+                    .circuSolutions__tab(data-tab="sol-6") Воинский учёт
+                    .circuSolutions__tab(data-tab="sol-7") Миграционный учёт
+                    .circuSolutions__tab(data-tab="sol-8") Расчет и распределение нагрузки
+                    .circuSolutions__tab(data-tab="sol-9") Составление расписания
+                    .circuSolutions__tab(data-tab="sol-10") Защита данных
+                    .circuSolutions__tab(data-tab="sol-11") Управление контингентом
+                .circuSolutions__right
+                    .circuSolutions__plate.active(data-plate="sol-1")
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Колледжи 
+                            ul.circuSolutions__plateList
+                                li Работа с абитуриентами
+                                li Дистанционное обучение
+                                li Составление расписания 
+                                li Аудит сайта
+
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Учебный центр
+                            ul.circuSolutions__plateList
+                                li Управление дополнительным  образованием 
+                                li Работа со слушателями 
+                                li Дистанционное обучение
+
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Управление образованием
+                            ul.circuSolutions__plateList
+                                li Дистанционное обучение 
+                                li Работа с контингентом 
+                                li Документооборот 
+                                li Защита данных
+
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Бизнес-школы
+                            ul.circuSolutions__plateList
+                                li Дистанционное обучение 
+                                li Работа со слушателями 
+                                li Автоматизация бизнес-процессов
+
+                    .circuSolutions__plate(data-plate="sol-2")
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Колледжи 
+                            ul.circuSolutions__plateList
+                                li Работа с абитуриентами
+                                li Дистанционное обучение
+                                li Составление расписания 
+                                li Аудит сайта
+
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Учебный центр
+                            ul.circuSolutions__plateList
+                                li Управление дополнительным  образованием 
+                                li Работа со слушателями 
+                                li Дистанционное обучение
+                    .circuSolutions__plate(data-plate="sol-3")
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Учебный центр
+                            ul.circuSolutions__plateList
+                                li Управление дополнительным  образованием 
+                                li Работа со слушателями 
+                                li Дистанционное обучение
+
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Управление образованием
+                            ul.circuSolutions__plateList
+                                li Дистанционное обучение 
+                                li Работа с контингентом 
+                                li Документооборот 
+                                li Защита данных
+
+                        .circuSolutions__plateItem
+                            .circuSolutions__plateTitle Бизнес-школы
+                            ul.circuSolutions__plateList
+                                li Дистанционное обучение 
+                                li Работа со слушателями 
+                                li Автоматизация бизнес-процессов
+                    .circuSolutions__plate(data-plate="sol-4")
+                    .circuSolutions__plate(data-plate="sol-5")
+                    .circuSolutions__plate(data-plate="sol-6")
+                    .circuSolutions__plate(data-plate="sol-7")
+                    .circuSolutions__plate(data-plate="sol-8")
+                    .circuSolutions__plate(data-plate="sol-9")
+                    .circuSolutions__plate(data-plate="sol-10")
+                    .circuSolutions__plate(data-plate="sol-11")
+
+    // end circuSolutions

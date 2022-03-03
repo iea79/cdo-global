@@ -1,0 +1,87 @@
+.evensNews {
+    padding: 3em 0;
+
+    @media (min-width: 768px) {
+        padding: 3.125em 0;
+        position: relative;
+        // z-index: 1;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 63.5em;
+            width: 30em;
+            right: 0;
+            top: -5.13em;
+            background: url("../img/events-ellipse.svg") 0 0 no-repeat;
+            background-size: 100%;
+        }
+    }
+
+    &__head {
+
+        @media (min-width: 768px) {
+            padding-right: 16em;
+        }
+    }
+
+    &__slide {
+        text-decoration: none;
+        color: #2B2C34;
+    }
+
+    &__img {
+        height: 17em;
+        margin-bottom: 1.4em;
+        overflow: hidden;
+
+        @media (min-width: 768px) {
+            height: 19.375em;
+            margin-bottom: 1.89em;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+            transform: scale(1);
+        }
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-size: 1.3em;
+        line-height: 1.48;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.6em;
+
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+            min-height: 2.95em;
+        }
+    }
+
+    &__text {
+        font-size: 1.125em;
+        line-height: 1.48;
+        margin-bottom: 1.1em;
+    }
+
+    &__more {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 1.125em;
+        line-height: 1.36;
+        color: #5AB302;
+    }
+
+}
