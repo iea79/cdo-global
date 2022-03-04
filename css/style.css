@@ -1140,40 +1140,40 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .grid {
   margin-left: -20px;
   box-sizing: content-box;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
+  margin-left: -1.875em;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1234,74 +1234,86 @@ html[data-browser*=flexible] .grid_nowrap {
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 100%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 50%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 33.3333333333%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 25%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 20%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 16.6666666667%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 14.2857142857%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 12.5%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 11.1111111111%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 10%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 9.0909090909%;
+  margin-bottom: 1.875em;
 }
 .grid > div,
 .grid > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 1.875em;
   width: 8.3333333333%;
+  margin-bottom: 1.875em;
 }
 
 [data-grid-match] .grid__item {
@@ -1329,11 +1341,16 @@ html[data-browser*=flexible] .grid_nowrap {
 }
 
 .breadcrumb {
-  margin: 1.1em 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 1em 0;
+}
+@media (min-width: 768px) {
+  .breadcrumb {
+    margin: 2.875em 0 3em;
+  }
 }
 .breadcrumb li {
   display: inline-block;
@@ -1341,20 +1358,15 @@ html[data-browser*=flexible] .grid_nowrap {
   align-items: center;
 }
 .breadcrumb li:not(:first-child):before {
-  content: "/";
+  content: "—";
   display: inline-block;
-  margin: 0 1.2em;
-  color: rgba(29, 29, 27, 0.5);
-}
-.breadcrumb li:last-child a {
-  cursor: default;
-  text-decoration: none;
-  color: #2B2C34;
-  text-decoration: none;
+  margin: 0 0.76em;
+  color: inherit;
+  font-size: 1.1037em;
 }
 .breadcrumb li a {
-  font-size: 1em;
-  color: rgba(29, 29, 27, 0.5);
+  font-size: 0.8125em;
+  color: #262F1D;
   text-decoration: none;
 }
 .breadcrumb li a:hover {
@@ -1362,21 +1374,86 @@ html[data-browser*=flexible] .grid_nowrap {
 }
 
 .pagination {
-  margin: 25px 0;
+  margin: 3.625em auto 0;
   padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
 }
 .pagination li {
   display: inline-block;
 }
 .pagination li a {
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #3F4353;
+  border: 1px solid;
+  border-color: rgba(63, 67, 83, 0.1);
+  margin: 0 0.3125em;
+  width: 2.5em;
+  height: 2.5em;
+  transition: color 0.3s, border-color 0.3s;
 }
-.pagination li.prev a:before {
-  content: "<";
+@media (min-width: 768px) {
+  .pagination li a {
+    width: 3.5em;
+    height: 3.5em;
+  }
 }
-.pagination li.next a:before {
-  content: ">";
+.pagination li a.current {
+  border-color: rgba(63, 67, 83, 0);
+  cursor: auto;
+  color: #74D414;
+}
+.pagination li a:hover {
+  color: #74D414;
+}
+.pagination li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5em;
+  height: 2.5em;
+  color: rgba(63, 67, 83, 0.7);
+}
+@media (min-width: 768px) {
+  .pagination li span {
+    width: 3.5em;
+    height: 3.5em;
+  }
+}
+.pagination li.next a, .pagination li.prev a {
+  background-color: transparent;
+  width: 2.5em;
+  height: 3.5em;
+  border: none;
+  background: url("../img/arrowPagination.svg") center no-repeat;
+  background-size: contain;
+  opacity: 1;
+  transition: opacity 0.3s;
+  z-index: 2;
+  cursor: pointer;
+}
+.pagination li.next a.disable, .pagination li.prev a.disable {
+  opacity: 0.5;
+  cursor: auto;
+}
+.pagination li.prev a {
+  transform: rotate(-180deg);
+}
+@media (min-width: 768px) {
+  .pagination li.prev a {
+    margin-right: 1.875em;
+  }
+}
+@media (min-width: 768px) {
+  .pagination li.next a {
+    margin-left: 1.875em;
+  }
 }
 
 .btn {
@@ -1419,16 +1496,16 @@ html[data-browser*=flexible] .grid_nowrap {
   color: #ffffff;
 }
 .btn_success {
-  background-color: #36a566;
-  border-color: #36a566;
+  background-color: #74D414;
+  border-color: #74D414;
   color: #ffffff;
 }
 .btn_success:hover {
-  background-color: #2d8a55;
+  background-color: #62b311;
   color: #ffffff;
 }
 .btn_success:active, .btn_success:focus {
-  background-color: #297f4e;
+  background-color: #5ba510;
   color: #ffffff;
 }
 .btn_info {
@@ -1812,6 +1889,30 @@ html[data-browser*=flexible] .grid_nowrap {
   }
 }
 
+.page {
+  padding-bottom: 3em;
+}
+@media (min-width: 768px) {
+  .page {
+    padding-bottom: 6.25em;
+  }
+}
+.page__title {
+  color: #2B2C34;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0.6em 0;
+}
+@media (min-width: 768px) {
+  .page__title {
+    font-size: 3.5em;
+    margin: 0.817em 0;
+  }
+}
+
 .homeScreen {
   padding: 0;
   position: relative;
@@ -2185,6 +2286,72 @@ html[data-browser*=flexible] .grid_nowrap {
 }
 .tabs__pane.active {
   display: block;
+}
+
+.news__link {
+  display: block;
+  text-decoration: none;
+  color: #3F4353;
+}
+.news__img {
+  height: 17em;
+  margin-bottom: 1.4em;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .news__img {
+    height: 19.019em;
+    margin-bottom: 1.3674em;
+  }
+}
+.news__img:hover img {
+  transform: scale(1.1);
+}
+.news__img img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1s;
+}
+.news__date {
+  margin-bottom: 0.7458em;
+}
+.news__date span {
+  font-size: 0.875em;
+}
+.news__title {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.48;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .news__title {
+    font-size: 1.4917em;
+    min-height: 2.95em;
+  }
+}
+
+@media (min-width: 768px) {
+  .newsGrid {
+    margin-left: -1.875em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .newsGrid > div,
+.newsGrid > a {
+    display: flex;
+    padding-left: 1.875em;
+    width: 33.3333333333%;
+    margin-bottom: 1.875em;
+  }
+}
+.newsGrid__item {
+  margin-bottom: 1.5em;
 }
 
 .weOffer {

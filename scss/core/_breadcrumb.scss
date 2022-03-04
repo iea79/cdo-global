@@ -1,11 +1,15 @@
 // Breadcrumb ==================================================================
 
 .breadcrumb {
-	margin: 1.1em 0;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+
+	margin: 1em 0;
+	@media (min-width: 768px) {
+		margin: 2.875em 0 3em;
+	}
 
 	li {
 		display: inline-block;
@@ -14,25 +18,17 @@
 
 		&:not(:first-child) {
 			&:before {
-				content: '/';
+				content: '\2014';
 				display: inline-block;
-				margin: 0 1.2em;
-				color: rgba(29, 29, 27, 0.5);
-			}
-		}
-
-		&:last-child {
-			a {
-				cursor: default;
-				text-decoration: none;
-				color: $main_color;
-				text-decoration: none;
+				margin: 0 0.76em;
+				color: inherit;
+				font-size: 1.1037em;
 			}
 		}
 
 		a {
-			font-size: 1em;
-			color: rgba(29, 29, 27, 0.5);
+			font-size: 0.8125em;
+			color: #262F1D;
 			text-decoration: none;
 
 			&:hover {

@@ -27,10 +27,12 @@
 @import "./vendor/modal";
 
 @import "./components/section";
+@import "./components/page";
 @import "./components/homeScreen";
 @import "./components/ourClients";
 @import "./components/evensNews";
 @import "./components/tabs";
+@import "./components/news";
 
 .sliderTripple {
     &__item {}

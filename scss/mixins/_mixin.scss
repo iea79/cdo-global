@@ -146,7 +146,7 @@
 // Ширина колонок сетки
 // Использование
 // @include grid(2, .5em); две колонки
-@mixin grid($size: 1, $gup: 20px) {
+@mixin grid($size: 1, $gup: 1.875em) {
 	margin-left: -$gup;
 	display: flex;
 	flex-wrap: wrap;
@@ -156,7 +156,7 @@
 		display: flex;
 		padding-left: $gup;
 		width: 100% / $size;
-		// margin-bottom: $gup / 2;
+		margin-bottom: $gup;
 	}
 }
 // Ширина колонок сетки при смене ширины окна

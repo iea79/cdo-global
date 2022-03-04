@@ -1,32 +1,94 @@
 // Pagination ==================================================================
+
 .pagination {
-	margin: 25px 0;
+	margin: 3.625em auto 0;
 	padding: 0;
+	width: fit-content;
+
+	display: flex;
+	align-items: center;
+
 	li {
 		display: inline-block;
+
 		a {
-			display: block;
-			text-align: center;
-		}
-		&.prev, &.next {
-			a {
-				&:before {					
-				}
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			color: $second_color;
+			border: 1px solid;
+			border-color: rgba($second_color, 0.1);
+			margin: 0 0.3125em;
+			width: 2.5em;
+			height: 2.5em;
+			transition: color 0.3s, border-color 0.3s;
+
+			@media (min-width: 768px) {
+				width: 3.5em;
+				height: 3.5em;
+			}
+
+			&.current {
+				border-color: rgba($second_color, 0);
+				cursor: auto;
+				color: $color_success;
+			}
+
+			&:hover {
+				color: $color_success;
 			}
 		}
+
+		span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 2.5em;
+			height: 2.5em;
+			@media (min-width: 768px) {
+				width: 3.5em;
+				height: 3.5em;
+			}
+			color: rgba($second_color, 0.7);
+
+		}
+
+		&.next,
 		&.prev {
 			a {
-				&:before {
-					content: '<';
-					
+				background-color: transparent;
+				width: 2.5em;
+				height: 3.5em;
+				border: none;
+				background: url("../img/arrowPagination.svg") center no-repeat;
+				background-size: contain;
+				opacity: 1;
+				transition: opacity 0.3s;
+				z-index: 2;
+				cursor: pointer;
+
+				&.disable {
+					opacity: 0.5;
+					cursor: auto;
+				}
+			}
+
+		}
+
+		&.prev {
+			a {
+				transform: rotate(-180deg);
+				@media (min-width: 768px) {
+					margin-right: 1.875em;
 				}
 			}
 		}
+
 		&.next {
 			a {
-				&:before {
-					content: '>';
-					
+				@media (min-width: 768px) {
+					margin-left: 1.875em;
 				}
 			}
 		}
