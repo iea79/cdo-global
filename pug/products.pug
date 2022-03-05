@@ -8,3 +8,94 @@ block content
             h1.page__title Продукты
 
             .filter
+                .filter__row
+                    .filter__check
+                        input(type="checkbox" checked="")
+                        span Высшее образование
+                    .filter__check
+                        input(type="checkbox" checked="")
+                        span Среднее профессиональное образование
+                    .filter__check
+                        input(type="checkbox" checked="")
+                        span Дистанционное обучение
+                    .filter__check
+                        input(type="checkbox")
+                        span Обучение сотрудников
+                .filter__row
+                    ul.filter__list
+                        li
+                            a(href="#") Admin
+                        li
+                            a(href="#").current Categories
+                        li
+                            a(href="#").current Comments
+                        li
+                            a(href="#") Media
+                        li
+                            a(href="#") Misc
+                        li
+                            a(href="#") Plugins
+                        li
+                            a(href="#") Posts
+                        li
+                            a(href="#") RSS
+                        li
+                            a(href="#") SEO
+                        li
+                            a(href="#") Themes
+                        li
+                            a(href="#") Users
+
+
+
+
+
+            h2.productGrid__title решения cdo
+            .productGrid
+                each grid in [ {img: 1, name: 'Электронная Информационная Образовательная Среда', text: 'Портал для организации дистанционного обучения и взаимодействия обучающихся, преподавателей и сотрудников университета.'}, {img: 2, name: 'Мобильное приложение', text: 'Сервис обеспечивающий доступ всех участников образовательного процесса к информационной системе образовательного учреждения'}, {img: 3, name: 'Электронная Приемная', text: 'Портал для осуществления онлайн-подачи и онлайн-приёма заявлений от абитуриентов'}, {img: 4, name: 'Портал Сотрудника', text: 'Комплексное решение для организации работы внутри образовательной организации'},  ]
+
+                    .productGrid__item
+                        a(href="#").productGrid__link
+                            .productGrid__img
+                                img(src="img/solitions-"+grid.img+".svg", alt="alt")
+                            .productGrid__name
+                                span=grid.name
+                            .productGrid__text=grid.text
+
+            h2.productGrid__title решения 1с
+            .productGrid.productGrid_second
+                each grid in [ {img: 1, name: '1С: Автоматизированное составление расписания. Колледж', text: 'Программный инструмент для управления процессами учреждений начального и среднего профессионального образования.'}, {img: 2, name: '1С: Колледж Проф', text: 'Комплексное решение, автоматизации рабочих процессов вуза'}, {img: 3, name: '1С: Автоматизированное составление расписания. Университет', text: 'Комплексное решение для управления деятельностью образовательных организаций среднего профессионального образования'}, {img: 4, name: '1С: Университет Проф', text: 'Программный продукт, предназначенный для автоматизации учета, обработки, хранения и анализа данных о процессах высшего учебного заведения'}, {img: 5, name: '1С: Управление учебным центром', text: 'Комплексное решение для управления деятельностью образовательных организаций среднего профессионального образования'},]
+
+                    .productGrid__item
+                        a(href="#").productGrid__link
+                            .productGrid__img
+                                img(src="img/asrcollege-"+grid.img+".svg", alt="alt")
+                            .productGrid__name
+                                span=grid.name
+                            .productGrid__text=grid.text
+
+
+
+            .form__inner
+                h2.form__title Напишите нам
+                form.form.form_grid(action="")
+                    .form__row.form__row_full
+                        label(for="name") Имя
+                        input(type="text" id="name")
+                    .form__row
+                        label(for="email") Email
+                        input(type="email" id="email")
+                    .form__row
+                        label(for="phone") Телефон
+                        input(type="number" id="phone")
+                    .form__row.form__row_full
+                        .form__text
+                            .form__img
+                                img(src="img/lock.svg", alt="alt")
+                            span Мы безопасно храним данные и никому их не передаём, вот 
+                                a(href="#" target="_blank") условия.
+                    .form__button
+                        .button
+                            button.btn(type="submit") 
+                                span.btn__decor
+                                span.btn__title Отправить запрос

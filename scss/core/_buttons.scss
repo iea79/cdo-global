@@ -1,49 +1,84 @@
 // Style for button and pseudo button for input and link
 
 .btn {
+	position: relative;
 	color: $btn_default_text_color;
 	font-family: $main_font_family;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 5px 15px 7px;
+	font-size: 1.25em;
+	font-weight: 500;
+	// padding: 5px 15px 7px;
 	border: none;
 	outline: none;
 	text-decoration: none;
 	display: inline-block;
-	background-color: $btn_default_bg_color;
+	background-color: transparent;
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	border-radius: 5px;
 	transition: 0.3s;
 	transition-property: background color border-color;
 
+	&__title {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__decor {
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+
+			display: block;
+			border-radius: 50%;
+			transform: scale(1);
+			transition: transform 0.3s;
+		}
+
+		&:before {
+			background: url("../img/patternGif.gif");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+
+			top: -1.09em;
+			left: -1em;
+
+			width: 3.5em;
+			height: 3.5em;
+
+			@media (min-width: 768px) {
+				top: -2.2em;
+				left: -2.2em;
+				width: 5.619em;
+				height: 5.619em;
+
+			}
+		}
+
+		&:after {
+			top: -14.2em;
+			left: -14.2em;
+			width: 30em;
+			height: 30em;
+			border: 1px solid rgba(#262f1d, .15);
+			pointer-events: none;
+		}
+	}
+
 	&:hover {
-		background-color: $btn_default_bg_color_hover;
-		color: $btn_default_text_color;
+		.btn__decor {
+			&:after,
+			&:before {
+				transform: scale(1.6);
+
+			}
+
+		}
+
 	}
 
 	&:active,
-	&:focus {
-		background-color: $btn_default_bg_color_active;
-		color: $btn_default_text_color;
-	}
-	@each $status_el, $color_bg in $el_colors {
-		&_#{$status_el} {
-			background-color: $color_bg;
-			border-color: $color_bg;
-			color: $btn_contrast_text_color;
+	&:focus {}
 
-			&:hover {
-				background-color: darken($color_bg, 7%);
-				color: $btn_contrast_text_color;
-			}
-
-			&:active,
-			&:focus {
-				background-color: darken($color_bg, 10%);
-				color: $btn_contrast_text_color;
-			}
-		}
-	}
 }

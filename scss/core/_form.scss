@@ -1,4 +1,48 @@
 .form {
+	&__inner {
+		position: relative;
+		background-color: $color_success;
+		padding: 1.5em 1em 7em;
+		overflow: hidden;
+
+		@media (min-width: 768px) {
+			padding: 3.75em 29.375em 4.375em 3.75em;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: 400;
+		color: $second_color;
+		line-height: 1.48;
+		letter-spacing: 0.08em;
+		margin: 0 0 0.75664em;
+		font-size: 1.5em;
+
+		@media (min-width: 768px) {
+			font-size: 2.875em;
+
+		}
+	}
+
+	&_grid {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -45px;
+
+		.form__row {
+			margin: 0 45px 30px;
+			width: 100%;
+			@media (min-width: 768px) {
+				width: calc(50% - 90px);
+			}
+
+			&_full {
+				width: 100%;
+			}
+		}
+	}
+
 	&__row {
 		margin-bottom: 15px;
 
@@ -23,7 +67,50 @@
 		}
 	}
 
-	&__label {}
+	label {
+		color: #262F1D;
+		display: inline-block;
+	}
+
+	&__text {
+		position: relative;
+		color: #262F1D;
+		margin-left: 1.5em;
+
+		span {
+			font-size: 0.65em;
+			@media (min-width: 768px) {
+				font-size: 0.875em;
+
+			}
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0.0625em;
+		left: -1.5em;
+		width: 0.6875em;
+		height: 0.9375em;
+	}
+
+	&__button {
+		position: absolute;
+
+		bottom: 3.5em;
+		left: 2.2em;
+		@media (min-width: 768px) {
+			bottom: auto;
+			left: auto;
+			top: 15.9em;
+			right: 6em;
+
+		}
+	}
 }
 // Input text and textarea ================================================
 input:not([type]),
@@ -36,30 +123,28 @@ input[type=tel],
 input[type=text],
 input[type=url],
 textarea {
-	background-color: $input_bg_color;
-	border: 1px solid $input_border_color;
+	border: none;
+	background-color: transparent;
 	font-family: $main_font_family;
-	color: $input_color;
-	padding: 6px 15px;
+	color: #262F1D;
+	padding: 0.375em 1em 0.375em 0;
 	outline: none;
-	font-size: 16px;
+	font-size: 1em;
 	font-weight: 400;
-	border-radius: 5px;
+	border-bottom: 1px solid;
+	border-color: rgba($second_color, .8);
 	transition: 0.3s;
 
 	&:hover {
-		border: 1px solid $input_hover_border_color;
-		background-color: $input_hover_bg_color;
+		border-color: rgba($second_color, 1);
 	}
 
 	&:focus {
-		border: 1px solid $input_focus_border_color;
-		background-color: $input_focus_bg_color;
+		border-color: rgba($second_color, 1);
 	}
 
 	&.invalid {
-		background-color: $input_error_bg_color;
-		border: 1px solid $input_error_border_color;
+		border-color: rgba($color_danger, 1);
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
@@ -85,40 +170,43 @@ input[type=number] {
 }
 
 // Input checkbox and radio ===============================================
-input[type=checkbox],
-input[type=radio] {
-	padding: 0;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex: none;
-	height: 14px;
-	width: 14px;
-	color: #aaa;
-	background: 0 0;
-	border: 1px solid;
-	overflow: hidden;
-	vertical-align: middle;
-	appearance: none;
-	outline: 0;
-	text-align: center;
-	position: relative;
-
-	&:not(:disabled),
-	&:not(:disabled) {
-		cursor: pointer;
-	}
-
-	&:before,
-	&:before {
-		display: block;
-	}
-
-	&:disabled,
-	&:disabled {
-		color: #ddd;
-	}
-}
+// input[type=checkbox],
+// input[type=radio] {
+// 	padding: 0;
+// 	display: inline-flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	flex: none;
+// 	height: 0.8125em;
+// 	width: 0.8125em;
+// 	color: $main_color;
+// 	background: 0 0;
+// 	border: 1px solid;
+// 	border-color: #DBDBDB;
+// 	overflow: hidden;
+// 	vertical-align: middle;
+// 	appearance: none;
+// 	outline: 0;
+// 	text-align: center;
+// 	position: relative;
+//
+// 	transition: background-color 0.3s, border-color 0.3s;
+//
+// 	&:not(:disabled),
+// 	&:not(:disabled) {
+// 		cursor: pointer;
+// 	}
+//
+// 	&:before,
+// 	&:before {
+// 		display: block;
+// 	}
+//
+// 	&:disabled,
+// 	&:disabled {
+// 		color: #ddd;
+// 	}
+// }
 
 input[type=radio] {
 	border-radius: 50%;
@@ -137,25 +225,30 @@ input[type=radio] {
 	}
 }
 
-input[type=checkbox] {
-	&:checked:before,
-	&:indeterminate:before {
-		content: "";
-		width: 40%;
-		height: 60%;
-		color: #000;
-		margin-top: -3px;
-		border-right: 1px solid;
-		border-bottom: 1px solid;
-		transform: rotate(45deg);
-	}
-
-	&:indeterminate:before {
-		content: "";
-	}
-
-	&:disabled:checked:before,
-	&:disabled:indeterminate:before {
-		color: #aaa;
-	}
-}
+// input[type=checkbox] {
+// 	&:checked {
+// 		background-color: $color_success;
+// 		border-color: $color_success;
+// 	}
+//
+// 	&:checked:before,
+// 	&:indeterminate:before {
+// 		content: "";
+// 		width: 40%;
+// 		height: 60%;
+// 		color: $color_withe;
+// 		margin-top: -3px;
+// 		border-right: 1px solid;
+// 		border-bottom: 1px solid;
+// 		transform: rotate(45deg);
+// 	}
+//
+// 	&:indeterminate:before {
+// 		content: "";
+// 	}
+//
+// 	&:disabled:checked:before,
+// 	&:disabled:indeterminate:before {
+// 		color: #aaa;
+// 	}
+// }
