@@ -21,14 +21,20 @@
         position: absolute;
         width: 1.25em;
         height: 1.25em;
-        right: 3.75em;
-        top: 3.75em;
+        right: 1em;
+        top: 1em;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #262F1D;
         transform: rotate(0deg);
-        // background: image-url('close.svg') no-repeat center center;
+
+        @media (min-width: 768px) {
+            right: 3.75em;
+            top: 3.75em;
+
+        }
+
         &:after,
         &:before {
             content: '';
@@ -46,9 +52,13 @@
             transform: rotate(-45deg);
         }
 
-        &:hover {
-            transform: rotate(180deg);
+        @media (min-width: 768px) {
+            &:hover {
+                transform: rotate(90deg);
+            }
+
         }
+
     }
 
     &.fade .modal-dialog {
@@ -71,24 +81,44 @@
         position: relative;
         width: auto;
         margin: auto;
-        max-width: 92.5em;
-        margin-top: 13.5625em;
+        max-width: 27em;
+        margin-top: 6em;
+
+        @media (min-width: 768px) {
+            max-width: 92.5em;
+            margin-top: 13.5625em;
+
+        }
 
         .form__title {
             margin-bottom: 1.36364em;
         }
 
         .form__row {
-            margin-bottom: 3.3562em;
+            margin-bottom: 2.5em;
+
+            @media (min-width: 768px) {
+                margin-bottom: 3.3562em;
+
+            }
         }
 
         .form__row_bottom {
-            margin-top: 1.4375em;
+
+            @media (min-width: 768px) {
+                margin-top: 1.4375em;
+
+            }
         }
 
         .form__inner {
-            padding-top: 6.25em;
+            padding-top: 2.5em;
             padding-bottom: 7.0625em;
+
+            @media (min-width: 768px) {
+                padding-top: 6.25em;
+                padding-bottom: 7.0625em;
+            }
         }
 
         input {
@@ -96,8 +126,15 @@
         }
 
         .form__button {
-            top: 20em;
-            right: 10em;
+            // position: initial;
+            left: 3.6em;
+
+            @media (min-width: 768px) {
+                left: auto;
+                top: 20em;
+                right: 10em;
+
+            }
         }
 
     }
@@ -135,24 +172,31 @@
 
     &_sm {
         .modal-dialog {
-            max-width: 59.5625em;
+
+            @media (min-width: 768px) {
+                max-width: 59.5625em;
+            }
         }
 
         .form__inner {
-            padding-right: 6em;
-            padding-bottom: 8.8125em;
+            padding-bottom: 4em;
 
-            &:after {
-                content: '';
-                position: absolute;
-                top: -20em;
-                left: -20em;
+            @media (min-width: 768px) {
+                padding-right: 6em;
+                padding-bottom: 8.8125em;
 
-                display: block;
-                border-radius: 50%;
-                width: 70.1875em;
-                height: 70.1875em;
-                border: 1px solid rgba(#262f1d, .15);
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -20em;
+                    left: -20em;
+
+                    display: block;
+                    border-radius: 50%;
+                    width: 70.1875em;
+                    height: 70.1875em;
+                    border: 1px solid rgba(#262f1d, .15);
+                }
             }
 
         }
@@ -163,7 +207,11 @@
 
         .form__button {
             position: initial;
-            margin-left: 2.7em;
+            margin-left: 1.3em;
+
+            @media (min-width: 768px) {
+                margin-left: 2.7em;
+            }
 
         }
 

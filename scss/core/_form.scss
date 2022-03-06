@@ -27,11 +27,19 @@
 	}
 
 	&__description {
-		margin-bottom: 5.8125em;
-		/* 93/16 */
+		margin-bottom: 3em;
+
+		@media (min-width: 768px) {
+			margin-bottom: 5.8125em;
+		}
 
 		span {
-			font-size: 1.125em;
+			font-size: 1em;
+			// line-height: 1.1;
+			@media (min-width: 768px) {
+				font-size: 1.125em;
+
+			}
 		}
 	}
 
@@ -43,12 +51,11 @@
 
 		.form__row {
 			margin: 0 2.8125em 1.875em;
-			/* 45/16 */
-			/* 30/16 */
+
 			width: 100%;
 			@media (min-width: 768px) {
 				width: calc(50% - 5.625em);
-				/* 90/16 */
+
 			}
 
 			&_full {
@@ -59,7 +66,6 @@
 
 	&__row {
 		margin-bottom: 0.9375em;
-		/* 15/16 */
 
 		.btn,
 		input:not([type]),
@@ -146,6 +152,7 @@ textarea {
 	outline: none;
 	font-size: 1em;
 	font-weight: 400;
+	border-radius: 0;
 	border-bottom: 1px solid;
 	border-color: rgba($second_color, .8);
 	transition: 0.3s;

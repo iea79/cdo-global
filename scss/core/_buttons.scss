@@ -66,9 +66,12 @@
 	}
 
 	&:hover {
-		&:after,
-		&:before {
-			transform: scale(1.6);
+
+		@media (min-width: 768px) {
+			&:after,
+			&:before {
+				transform: scale(1.6);
+			}
 		}
 	}
 
@@ -77,17 +80,33 @@
 
 	&_lg {
 		&:before {
-			top: -23.2em;
-			left: -23.2em;
-			width: 46.9375em;
-			height: 46.9375em;
+			top: -16em;
+			left: -16em;
+			width: 30em;
+			height: 30em;
+
+			@media (min-width: 768px) {
+				top: -23.2em;
+				left: -23.2em;
+				width: 46.9375em;
+				height: 46.9375em;
+
+			}
 		}
 
 		&:after {
-			top: -4em;
-			left: -5.1em;
-			width: 9.249em;
-			height: 9.249em;
+			top: -2em;
+			left: -2em;
+			width: 5em;
+			height: 5em;
+
+			@media (min-width: 768px) {
+				top: -4em;
+				left: -5.1em;
+				width: 9.249em;
+				height: 9.249em;
+
+			}
 
 		}
 	}
