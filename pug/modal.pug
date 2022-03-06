@@ -1,0 +1,89 @@
+extends layout/layout.pug
+
+block content
+
+    // begin modal
+    section.section
+        .container_center
+            h2.section__title модальные окна
+            br
+            br
+
+
+            // Button trigger modal modal
+            button(class="btn" data-toggle="modal" data-target="#modal")
+                span modal
+            // Begin Modal modal
+            .modal.fade.modal#modal
+                .modal-dialog
+                    .form__inner
+                        a(href="#" class="modal-close" data-dismiss="modal")
+                        h2.form__title Напишите нам
+                        form.form.form_grid(action="")
+                            .form__row.form__row_full
+                                label(for="name") Имя
+                                input(type="text" id="name")
+                            .form__row
+                                label Предпочтительный тип связии
+                                select.select(data-placeholder="Предпочтительный тип связии")
+                                    option(value="")
+                                    option(value="Позвонить на телефон") Позвонить на телефон
+                                    option(value="Написать на email") Написать на email
+                                    option(value="WhatsApp") WhatsApp
+                                    option(value="Telegram") Telegram
+                            .form__row
+                                label(for="email") Email
+                                input(type="email" id="email")
+                            .form__row.form__row_full.form__row_bottom
+                                .form__text
+                                    .form__img
+                                        img(src="img/lock.svg", alt="alt")
+                                    span Мы безопасно храним данные и никому их не передаём, вот 
+                                        a(href="#" target="_blank") условия.
+                            .form__button
+                                .button
+                                    button.btn.btn_lg(type="submit") 
+                                        span Жду звонка
+
+            // End modal modal
+
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+
+            // Button trigger modal modal_sm
+            button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal_sm")
+                span modal 2
+            // Begin Modal modal_sm
+            .modal.fade.modal_sm#modal_sm
+                .modal-dialog
+                    .form__inner
+                        a(href="#" class="modal-close" data-dismiss="modal")
+                        h2.form__title Спасибо за Вашу заявку!
+                        .form__description
+                            span Мы уже приняли ее в работу и скоро с Вами свяжемся
+                        .form__button
+                            .button
+                                button.btn(type="submit" data-dismiss="modal") 
+                                    span Вернуться на страницу
+
+
+            // End modal modal_sm
+
+
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+
+
+    // end modal

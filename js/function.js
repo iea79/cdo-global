@@ -229,6 +229,11 @@ function uploadYoutubeVideo() {
     }
 };
 
+$('.select').select2({
+    placeholder: $(this).data('placeholder'),
+    minimumResultsForSearch: Infinity
+});
+
 
 // Деление чисел на разряды Например из строки 10000 получаем 10 000
 // Использование: thousandSeparator(1000) или используем переменную.
