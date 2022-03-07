@@ -67,6 +67,48 @@ window.onload = () => {
             }
         ]
     });
+
+    $('.sliderDouble').slick({
+        dots: false,
+        infinite: false,
+        arrows: true,
+        nextArrow: '<button class="slick-next"></button>',
+        prevArrow: '<button class="slick-prev"></button>',
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
+    });
+
+    $('.sliderQuadruple').slick({
+        dots: false,
+        infinite: false,
+        arrows: true,
+        nextArrow: '<button class="slick-next"></button>',
+        prevArrow: '<button class="slick-prev"></button>',
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
+    });
 };
 
 window.addEventListener('resize', () => {

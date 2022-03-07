@@ -1,0 +1,65 @@
+.aside {
+    margin-bottom: 2em;
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        flex: none;
+        width: 21.6875em;
+        margin-left: 1.875em;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 1px solid #DBDBDB;
+    }
+
+    li {
+        position: relative;
+        border-bottom: 1px solid #DBDBDB;
+        background-color: transparent;
+        transition: background-color 0.3s;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -1px;
+            display: block;
+            width: 0.5em;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+
+        &:hover {
+            background-color: #EDEDED;
+
+            a {
+                color: #6CC017;
+            }
+
+            &:before {
+                background-color: #6CC017;
+
+            }
+
+        }
+
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        color: $second_color;
+        padding: 1em 2.1875em 1em 1.9375em;
+        line-height: 1.36;
+
+    }
+
+}

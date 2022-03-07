@@ -1,0 +1,133 @@
+extends layout/layout.pug
+
+block content
+    //- Страница одного продукта
+    .single
+        .single__header
+            .container_center
+                +breadcrumb(['Главная', 'Продукты', 'CDO.ЭИОС'])
+
+                .single__title
+                    .image
+                        img(src="img/solitions-1.svg", alt="alt")
+                    h1 Электронная информационно-образовательная среда
+
+        .container_center
+            .single__main
+                .aside
+                    ul
+                        each aside in ['CDO. Электронная Информационная Образовательная среда', 'CDO.Электронная Приемная Комиссия', 'CDO. Мобильное Приложение для Вуза', 'CDO. Управление Учебным Центром', 'CDO. Электронный Документооборот', 'CDO. Портал Сотрудника']
+                            li
+                                a(href="#")=aside
+
+                .single__content
+
+                    p CDO. Электронная информационная образовательная среда (CDO.ЭИОС) - портал для организации дистанционного обучения и взаимодействия обучающихся, преподавателей и сотрудников университета. Портал представляет собой интеграционное решение платформы Moodle и соответствующей конфигурации 1С, которые взаимодействуют между собой посредством API.
+
+                    // begin singlePoints
+                    section#singlePoints.singlePoints.section.section_single
+                        each item in [{num: '70', text: 'образовательных <br>учреждений уже используют'}, {num: '100', text: 'тысяч одновременно работающих <br>обучающихся и преподавателей'}, {num: '3', text: 'дня для запуска системы (при наличии <br>приобретенной системы 1С)'}]
+                            .singlePoints__item
+                                .singlePoint__nun=item.num
+                                .singlePoint__description!=item.text
+
+                    // end singlePoints
+
+                    p Решение позволяет построить единое цифровое пространство университета, объединив существующие информационные системы. Система CDO.ЭИОС разработана в соответствии с требованиями ФГОС 3++ и ФЗ-152 и регулярно модернизируется при появлении новых нормативно-правовых актов.
+
+                    // begin singleSlider
+                    section#singleSlider.singleSlider.section.section_single
+                        .sliderDouble
+                            each item in [1, 2, 2, 1, 2,]
+                                .singleSlider__slide
+                                    .singleSlider__image
+                                        img(src="img/sliderDouble-"+item+".jpg")
+                    // end singleSlider
+
+                    // begin singleAdvantege
+                    section#singleAdvantege.singleAdvantege.section_single
+                        each item in [{title: 'Масштабируемость ', text: 'Система может быть заинтегрирована с любой информационной системой, имеющей открытое API'}, {title: 'Гибкость', text: 'Мы не ограничиваем наших клиентов имеющимися сервисами. Система всегда может быть достроена и доработана под Ваши потребности'}, {title: 'Открытый программный код  ', text: 'После приобретения продукта Вы можете дорабатывать систему самостоятельно, не прибегая к помощи наших специалистов'}, ]
+                            .singleAdvantege__item
+                                .singleAdvantege__title=item.title
+                                .singleAdvantege__text=item.text
+                    // end singleAdvantege
+
+                    // begin ourClients
+                    section#ourClients.section.section_single
+                        h3.section__title.section__title_sm Уже используют
+                        .ourClients__list
+                            each item in [1,2,3,4,5]
+                                .ourClients__item.ourClients__item_single
+                                    img(src="img/client-"+item+".png", alt="")
+
+                    // end ourClients
+
+                    // begin singleForWhom
+                    section#singleForWhom.singleForWhom.section.section_single
+                        h3.section__title.section__title_sm Для кого
+                        .singleForWhom__list
+                            each item in [ {img: 1, text: 'Высшие учебные заведения'}, {img: 2, text: 'Колледжи'}, {img: 3, text: 'Бизнес-школы'}, {img: 4, text: 'Корпоративный университет'}, {img: 5, text: 'ДПО'}, ]
+                                a(href="#").singleForWhom__item
+                                    .singleForWhom__content
+                                        .singleForWhom__image
+                                            img(src="img/forWhom-"+item.img+".svg", alt="alt")
+                                        span=item.text
+
+
+                    // end singleForWhom
+
+
+
+        // begin single__form
+        section#single__form.single__form.section
+            .container_center
+                +form
+
+        // end single__form
+
+        // begin moreProduct
+        section#moreProduct.moreProduct.section
+            .container_center
+                h2.section__title.section__title_md ПОДРОБНЕЕ О ПРОДУКТЕ
+
+                h3.moreProduct__title Поддержка интеграций с
+                .moreProduct__grid
+                    each item in [ {img: '1', subtitle: 'Центрами компетенции по образованию', desc: '1С:Университет, 1С: Колледж, 1С:Управление учебным центром, 1С:Автоматическое составление расписания'}, {img: '2', subtitle: 'Системами видеоконференцсвязи:', desc: 'Skype, Zoom, BigBlueButton'}, {img: '3', subtitle: 'Цифровыми образовательными ресурсами', desc: 'Симуляторы, интерактивные задания и др.'}, {img: '4', subtitle: 'Мобильным приложением', desc: ''}, {img: '5', subtitle: 'Библиотечными системами', desc: ''}, {img: '6', subtitle: 'Системой Антиплагиат', desc: ''}, ]
+
+                        .moreProduct__plate
+                            .moreProduct__item
+                                .moreProduct__top
+                                    .moreProduct__image
+                                        img(src="img/moreProduct-"+item.img+".svg", alt="alt")
+                                    .moreProduct__subtitle=item.subtitle
+                                .moreProduct__description=item.desc
+
+                h3.moreProduct__title Встроенные сервисы
+                .moreProduct__grid
+                    each item in [ {img: '7', subtitle: 'Успеваемость и задолженности', desc: 'Вывод информации о результатах обучения в личный кабинет обучающегося'}, {img: '8', subtitle: 'РПД, ПП и ФОС', desc: 'Сервис для преподавателей для сдачи соответствующей отчетности'}, {img: '9', subtitle: 'Электронные ведомости', desc: 'Вывод информации о результатах обучения в личный кабинет обучающегося'}, {img: '10', subtitle: 'Аудит, разработка', desc: 'Skype, Zoom, BigBlueButton'}, {img: '11', subtitle: 'Расписание занятий', desc: 'Вывод расписания в личные кабинеты обучающегося и преподавателя'}, {img: '12', subtitle: 'Справки', desc: 'Сервис для онлайн-заказа справок'}, ]
+
+                        .moreProduct__plate
+                            .moreProduct__item
+                                .moreProduct__top
+                                    .moreProduct__image
+                                        img(src="img/moreProduct-"+item.img+".svg", alt="alt")
+                                    .moreProduct__subtitle=item.subtitle
+                                .moreProduct__description=item.desc
+        // end moreProduct
+
+        // begin examples
+        section#examples.examples.section
+            .container_center
+                h2.section__title.section__title_md Примеры внедрения
+                .examples__slider.sliderQuadruple
+                    each item in [{title: 'ИС управление приемной компанией и настройке ЛК', subtitle: 'АНО «Центр бизнеса Рязанской области»', text: 'Внедрение автоматизированной системы управления Приемной кампанией и настройка Личного кабинета абитуриента'}, {title: 'ИС управление', subtitle: 'АНО «Центр бизнеса', text: 'Внедрение автоматизированной системы управления'}, {title: 'ИС управление приемной компанией и настройке ЛК', subtitle: 'АНО «Центр бизнеса области»', text: 'Внедрение автоматизированной системы управления Приемной кампанией '}, {title: 'ИС управление приемной компанией', subtitle: 'АНО «Центр бизнеса Рязанской области»', text: 'Внедрение автоматизированной системы управления Приемной кампанией и настройка Личного кабинета абитуриента'}, {title: 'ИС управление приемной компанией и настройке ЛК', subtitle: 'АНО «Центр бизнеса', text: 'Внедрение автоматизированной системы управления Приемной кампанией и настройка Личного кабинета абитуриента'}, ]
+
+                        a(href="#" target="_blank").examples__slide
+                            .examples__image
+                                img(src="img/examples.jpg", alt="alt")
+                            .examples__title=item.title
+                            .examples__subtitle=item.subtitle
+                            .examples__text=item.text
+                            .examples__more Подробнее
+
+        // end examples

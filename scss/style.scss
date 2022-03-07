@@ -23,6 +23,7 @@
 @import 'core/filter';
 @import 'core/buttons';
 @import 'core/video';
+@import 'core/aside';
 
 @import "./vendor/slick";
 @import "./vendor/modal";
@@ -35,6 +36,7 @@
 @import "./components/tabs";
 @import "./components/products";
 @import "./components/news";
+@import "./components/single";
 
 .sliderTripple {
     &__item {}
