@@ -36,7 +36,19 @@
 @import "./components/tabs";
 @import "./components/products";
 @import "./components/news";
-@import "./components/single";
+@import "./components/pageAction";
+
+@import "./singleComponents/single";
+@import "./singleComponents/singlePoints";
+@import "./singleComponents/singleSlider";
+@import "./singleComponents/singleAdvantege";
+@import "./singleComponents/singleForWhom";
+@import "./singleComponents/moreProduct";
+@import "./singleComponents/examples";
+
+@import "./singleComponents/background";
+@import "./singleComponents/ourServices";
+@import "./singleComponents/singleTask";
 
 .sliderTripple {
     &__item {}

@@ -1,0 +1,32 @@
+.singleTask {
+    &__content {
+        display: flex;
+        gap: 1.875em;
+        /* 30/16 */
+    }
+
+    &__item {
+        width: 50%;
+        padding: 3.125em;
+        background-color: #EEEEEE;
+        color: $second_color;
+
+        .section__title {
+            margin-bottom: 0.226em;
+        }
+
+        &_success {
+            background-color: $color_success;
+            color: $color_withe;
+
+            .section__title {
+                color: $color_withe;
+            }
+        }
+    }
+
+    &__text {
+        line-height: 1.36;
+    }
+
+}

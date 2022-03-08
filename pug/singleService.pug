@@ -1,0 +1,74 @@
+extends layout/layout.pug
+
+block content
+    .single
+        .container_center
+            +breadcrumb(['Главная', 'Продукты', 'CDO.ЭИОС'])
+
+            .single__main
+                .aside.aside_lg
+                    ul
+                        li
+                            a(href="#") Аудит
+                        li.current
+                            a(href="#") 1с-разработка
+                        li
+                            a(href="#") Web-разработка
+                        li
+                            a(href="#") Moodle-разработка
+                        li
+                            a(href="#") Сопровождение
+                        li
+                            a(href="#") Консалтинг
+                        li
+                            a(href="#") Кибер-безопасность
+                        li
+                            a(href="#") Нейросети
+
+                .single__content
+
+                    // begin background
+                    section#background.background
+                        .background__bg.background__bg_flex(style="background-image: url('img/single-bg-1.jpg')")
+                            .background__content
+                                h1.background__title 1с-разработка
+                    // end background
+
+
+
+                    h2 Описание услуги
+
+                    p «<b>1С-Разработка</b> – это индивидуальная адаптация и расширение функционала платформы под особенности и потребности именно Вашей организации. Реализация проектов доступна на базе всех продуктов 1С: 1С:Университет, 1С:Колледж, 1С:Автоматическое составление расписания и других. Сертифицированные разработчики CDO Global проводят крупномасштабные и точечные доработки конфигураций или систем.»
+
+                    // begin ourServices
+                    section#ourServices.ourServices.section
+                        h3.section__title.section__title_xs Наши услуги
+                        .ourServices__content
+                            .ourServices__item
+                                .ourServices__number 1
+                                .ourServices__title Внедрение и запуск
+                                ul
+                                    each item in ['Установка и настройка конфигураций','Перенос и выверка данных','Загрузка справочников и классификаторов','Создание и настройка прав доступа ','Настройка параметров учёта и учётной политики','Создание и доработка отчётных форм, документов, печатных фор', ]
+                                        li=item
+
+                            .ourServices__item
+                                .ourServices__number 2
+                                .ourServices__title Доработка и сопровождение:
+                                ul
+                                    each item in ['Разработка расширений для конфигураций 1С','Обучение по работе с системами 1С','Сопровождение систем 1С','бновление систем 1С' ]
+                                        li=item
+
+                            .ourServices__item
+                                .ourServices__number 3
+                                .ourServices__title Настройка интеграций
+                                ul
+                                    each item in ['С внешними платформами и сервисами, в том числе, с Moodle, системами СКУД и другими ','С системами на базе 1С, в том числе, 1С:Университет, 1С:Колледж, 1С:Автоматизированное составление расписания, 1С:Зарплата и управление персоналом, 1С:Бухгалтерия, 1С:Документооборот и другими' ]
+                                        li=item
+                    // end ourServices
+
+        // begin single__form
+        section#single__form.single__form.section
+            .container_center
+                +form
+
+        // end single__form

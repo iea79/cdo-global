@@ -1,7 +1,6 @@
 extends layout/layout.pug
 
 block content
-    //- Страница одного продукта
     .single
         .single__header
             .container_center
@@ -16,9 +15,19 @@ block content
             .single__main
                 .aside
                     ul
-                        each aside in ['CDO. Электронная Информационная Образовательная среда', 'CDO.Электронная Приемная Комиссия', 'CDO. Мобильное Приложение для Вуза', 'CDO. Управление Учебным Центром', 'CDO. Электронный Документооборот', 'CDO. Портал Сотрудника']
-                            li
-                                a(href="#")=aside
+
+                        li.current
+                            a(href="#") CDO. Электронная Информационная Образовательная среда
+                        li
+                            a(href="#") CDO.Электронная Приемная Комиссия
+                        li
+                            a(href="#") CDO. Мобильное Приложение для Вуза
+                        li
+                            a(href="#") CDO. Управление Учебным Центром
+                        li
+                            a(href="#") CDO. Электронный Документооборот
+                        li
+                            a(href="#") CDO. Портал Сотрудника
 
                 .single__content
 
@@ -54,7 +63,7 @@ block content
 
                     // begin ourClients
                     section#ourClients.section.section_single
-                        h3.section__title.section__title_sm Уже используют
+                        h3.section__title.section__title_xs Уже используют
                         .ourClients__list
                             each item in [1,2,3,4,5]
                                 .ourClients__item.ourClients__item_single
@@ -64,7 +73,7 @@ block content
 
                     // begin singleForWhom
                     section#singleForWhom.singleForWhom.section.section_single
-                        h3.section__title.section__title_sm Для кого
+                        h3.section__title.section__title_xs Для кого
                         .singleForWhom__list
                             each item in [ {img: 1, text: 'Высшие учебные заведения'}, {img: 2, text: 'Колледжи'}, {img: 3, text: 'Бизнес-школы'}, {img: 4, text: 'Корпоративный университет'}, {img: 5, text: 'ДПО'}, ]
                                 a(href="#").singleForWhom__item

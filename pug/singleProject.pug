@@ -1,0 +1,55 @@
+extends layout/layout.pug
+
+block content
+    .single
+        .container_center
+            +breadcrumb(['Главная', 'Проекты', 'Разработка WEB-приложения  «Молодые кадры МГОУ»'])
+
+        // begin background
+        section#background.background
+            .container_center
+                .background__bg(style="background-image: url('img/single-bg-3.jpg')")
+                    .background__content
+                        .background__top
+                            h2.background__title.background__title_sm Разработка WEB-приложения  «Молодые кадры МГОУ»
+                            .background__logo
+                                img(src="img/bgLogo.png", alt="alt")
+                        .background__bottom
+                            each item in [ {number: '13', description: 'факультетов и институтов', }, {number: '>1200', description: 'обучающихся', } ,{number: '>650', description: 'преподавателей', } ]
+                                .background__item
+                                    .background__number=item.number
+                                    .background__description=item.description
+
+        // end background
+
+        // begin singleTask
+        section#singleTask.singleTask.section
+            .container_center
+                .singleTask__content
+
+                    .singleTask__item
+                        h2.section__title.section__title_md Задачи проекта
+                        .singleTask__text ООО «ЦДО», официальный партнер фирмы «1С», Центр компетенции по образованию, осуществляет поставки программных продуктов и услуги по автоматизации образовательных организаций по всей России. Мы имеем огромный опыт по внедрению таких информационных систем, как «1С: Университет» по всей России. Наши сотрудники – это профессионалы своего дела, которые сертифицированы по конфигурации «1С: Университет», обладатели сертификатов «1С Эксперт», «1С Специалист по платформе» и других дипломов, подтверждающих высокую квалификацию специалистов.
+                    .singleTask__item.singleTask__item_success
+                        h2.section__title.section__title_md Решение
+                        .singleTask__text ООО «ЦДО», официальный партнер фирмы «1С», Центр компетенции по образованию, осуществляет поставки программных продуктов и услуги по автоматизации образовательных организаций по всей России. Мы имеем огромный опыт по внедрению таких информационных систем, как «1С: Университет» по всей России. Наши сотрудники – это профессионалы своего дела, которые сертифицированы по конфигурации «1С: Университет», обладатели сертификатов «1С Эксперт», «1С Специалист по платформе» и других дипломов, подтверждающих высокую квалификацию специалистов.
+
+
+        // end singleTask
+
+        // begin pageAction
+        section#pageAction.pageAction.section
+            .container_center
+                .pageAction__wrap
+                    .pageAction__content
+                        .pageAction__description продуктЫ, использованныЕ При разработке  
+                        h3.section__title.section__title_sm «1С: Предприятие», CDO. Электронная Информационная Образовательная Среда, «1С:Университет ПРОФ», «1С: бухгалтерия»
+                    .pageAction__button
+                        button.btn.btn_success(type="submit") 
+                            span Хочу  так же
+        // end pageAction
+
+
+
+        .single__content
+            .container_center.container_center_sm

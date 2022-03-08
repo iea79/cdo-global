@@ -18,7 +18,9 @@
             margin: 0 0 0.5625em;
         }
 
-        &_sm {
+        &_xs {
+            color: $second_color;
+
             font-size: 1.5em;
             margin: 0 0 0.9em;
             line-height: 1.488;
@@ -26,6 +28,16 @@
             @media (min-width: 768px) {
                 font-size: 1.625em;
             }
+        }
+
+        &_sm {
+            line-height: 1.48;
+            font-size: 1.625em;
+            @media (min-width: 768px) {
+                font-size: 1.875em;
+
+            }
+
         }
 
         &_md {
@@ -37,6 +49,10 @@
                 margin: 0 0 0.904em;
             }
         }
+
+        &_reverse {
+            color: $color_withe;
+        }
     }
 
     &_single {
@@ -47,11 +63,11 @@
 
         }
 
-        &:last-child {
-            padding-bottom: 0;
-        }
+        // &:last-child {
+        //     padding-bottom: 0;
+        // }
 
-        .section__title_sm {
+        .section__title_xs {
             color: $second_color;
 
             @media (min-width: 768px) {

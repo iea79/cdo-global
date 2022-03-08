@@ -1,0 +1,31 @@
+.pageAction {
+    &__wrap {
+        overflow: hidden;
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        padding: 3.5em 4.5em;
+        /* 56/16 */
+        /* 72/16 */
+
+        border: 1px solid #CECECE;
+        background-color: #EDEDED;
+        // min-height: 20.875em;
+        /* 334/16 */
+    }
+
+    &__content {
+        width: 56.625em;
+    }
+
+    &__description {
+        color: $second_color;
+        text-transform: uppercase;
+        margin-bottom: 1.25em;
+    }
+
+    &__button {
+        align-self: center;
+    }
+
+}

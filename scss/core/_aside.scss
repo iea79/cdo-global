@@ -36,6 +36,7 @@
             transition: background-color 0.3s;
         }
 
+        &.current,
         &:hover {
             background-color: #EDEDED;
 
@@ -60,6 +61,15 @@
         padding: 1em 2.1875em 1em 1.9375em;
         line-height: 1.36;
 
+    }
+
+    @media (min-width: 768px) {
+        &_lg {
+            a {
+                padding: 1.6875em 2.1875em 1.8125em 1.9375em;
+            }
+
+        }
     }
 
 }

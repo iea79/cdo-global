@@ -111,4 +111,24 @@
 		}
 	}
 
+	&_success {
+		// color: $color_withe;
+
+		span {
+			display: inline-block;
+			width: 2em;
+			border: 1px solid #000;
+		}
+
+		&:after,
+		&:before {}
+
+		&:before {}
+
+		&:after {
+			background-image: none;
+			background-color: $color_success;
+		}
+	}
+
 }

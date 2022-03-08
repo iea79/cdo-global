@@ -1,0 +1,90 @@
+.singleForWhom {
+    &__list {
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+    }
+
+    &__item {
+        display: block;
+        text-decoration: none;
+        padding: 1em;
+        background-color: transparent;
+        transition: background-color 0.3s;
+
+        @media (min-width: 768px) {
+            width: 33.3%;
+            padding: 4.1875em 1.875em;
+            height: 12.5em;
+
+        }
+
+        &:hover {
+            background-color: #74D414;
+
+            .singleForWhom__image {
+                background-color: $color_withe;
+            }
+        }
+
+        border: 1px solid #CECECE;
+
+        @media (max-width: 767px) {
+
+            border-bottom: 0;
+
+            &:last-child {
+                border: 1px solid #CECECE;
+            }
+        }
+
+        @media (min-width: 768px) {
+            &:nth-child(n+2) {
+                border-left: 0;
+            }
+
+            &:nth-child(4n) {
+                border-left: 1px solid #CECECE;
+            }
+
+            &:nth-child(n+4) {
+                border-top: 0;
+            }
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 1.25em;
+            color: $second_color;
+            line-height: 1.36;
+        }
+
+    }
+
+    &__image {
+        margin-right: 1.25em;
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.25em;
+        height: 4.25em;
+        border-radius: 50%;
+
+        background-color: #74D414;
+        transition: background-color 0.3s;
+
+        img {
+            width: 60%;
+            height: 60%;
+        }
+    }
+}

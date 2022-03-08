@@ -1,0 +1,120 @@
+.single {
+    &_mb {
+        margin-bottom: 8.75em;
+    }
+
+    &__header {
+        background: radial-gradient(38.6% 73.42% at 50.76% 50%, #F7F7F7 0%, #EDEDED 100%);
+        margin-bottom: 1.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 4.375em;
+        }
+    }
+
+    &__title {
+        padding-top: 1em;
+        padding-bottom: 2em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            padding-top: 1.232em;
+            padding-bottom: 5.375em;
+
+        }
+
+        .image {
+            flex: none;
+            width: 11em;
+            height: 4em;
+
+            @media (min-width: 768px) {
+                width: 19.125em;
+                height: 7.25em;
+            }
+
+            img {
+                height: 100%;
+            }
+        }
+
+        h1 {
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: $second_color;
+            line-height: 1.48;
+            letter-spacing: 0.08em;
+            font-size: 1.5em;
+            margin-top: 1em;
+
+            @media (min-width: 768px) {
+                margin-top: 0;
+                font-size: 2.875em;
+                margin-left: 1.63em;
+            }
+        }
+    }
+
+    &__main {
+        // padding-top: 1.5em;
+        // padding-bottom: 3em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            // padding-top: 4.375em;
+            // padding-bottom: 3.125em;
+        }
+    }
+    //
+    &__form {
+        padding-bottom: 6.25em;
+        padding-top: 3.125em;
+    }
+
+    &__content {
+        min-width: 0;
+        flex-grow: 1;
+
+        p {
+            color: $second_color;
+            // line-height: 1.36;
+            line-height: 1.6;
+            margin: 0 0 1em;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: 0.08em;
+            margin: 0 0 1em;
+            line-height: 1.48;
+            color: $second_color;
+            font-size: 2em;
+
+            @media (min-width: 768px) {
+                font-size: 2.75em;
+                margin: 0 0 0.678em;
+            }
+        }
+
+        ol,
+        ul {
+            margin: 0;
+            padding: 0 0 0 1em;
+            color: $second_color;
+
+            margin-bottom: 3.75em;
+        }
+
+        li {
+            line-height: 1.36;
+            margin-bottom: 0.75em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}

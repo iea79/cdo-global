@@ -47,6 +47,10 @@ i[class*="icon_"] {
 	padding: 0 1em;
 	margin-left: auto;
 	margin-right: auto;
+
+	&_sm {
+		max-width: 63em;
+	}
 }
 
 .desktop {

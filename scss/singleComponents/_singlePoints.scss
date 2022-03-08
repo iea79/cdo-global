@@ -1,0 +1,34 @@
+.singlePoints {
+
+    @media (min-width: 768px) {
+        display: flex;
+        margin: 0 -1em;
+        padding: 1.492em 0 2.5em;
+    }
+
+    &__item {
+        margin: 0 0 1em;
+        background: #8CD93F;
+        color: $color_withe;
+        text-align: center;
+        padding: 3em 1.27em;
+
+        @media (min-width: 768px) {
+            padding: 3.75em 1.4375em 2.25em;
+
+            margin: 0 1em;
+            width: calc(33.3% - 1em);
+        }
+    }
+
+    &__num {
+        font-size: 3.5em;
+        line-height: 1;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.18em;
+    }
+
+    &__description {
+        line-height: 1.5;
+    };
+}

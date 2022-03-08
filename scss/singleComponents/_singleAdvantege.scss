@@ -1,0 +1,29 @@
+.singleAdvantege {
+
+    @media (min-width: 768px) {
+        display: flex;
+        margin: 0 -1em;
+    }
+
+    &__item {
+        margin: 0 0 1em;
+        color: $second_color;
+        padding: 1em;
+        border: 1px solid #CECECE;
+        line-height: 1.36;
+
+        @media (min-width: 768px) {
+            padding: 1.875em;
+            margin: 0 1em;
+            width: calc(33.3% - 1em);
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.25em;
+        margin-bottom: 0.895em;
+
+    }
+
+}
