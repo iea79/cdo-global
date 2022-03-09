@@ -123,7 +123,7 @@ window.addEventListener('resize', () => {
 
 function checkOnResize() {
     replaceHeaderElems();
-    replaceSolutionsTabs();
+    // replaceSolutionsTabs();
 }
 
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
@@ -168,27 +168,27 @@ function replaceHeaderElems() {
     }
 }
 
-function replaceSolutionsTabs() {
-    const wrap = $('.circuSolutions__right');
-    const plate = $('.circuSolutions__plate');
-    const tab = $('.circuSolutions__tab');
-    let id;
-
-    plate.each(function(i, el) {
-        id = $(el).data('plate');
-        if (isXsWidth()) {
-            $(el).insertAfter('[data-tab="'+id+'"]');
-        } else {
-            $(el).appendTo(wrap);
-        }
-    });
-
-    tab.on('click', function() {
-        if (isXsWidth()) {
-            this.scrollIntoView({behavior: "smooth"});
-        }
-    });
-}
+// function replaceSolutionsTabs() {
+//     const wrap = $('.circuSolutions__right');
+//     const plate = $('.circuSolutions__plate');
+//     const tab = $('.circuSolutions__tab');
+//     let id;
+//
+//     plate.each(function(i, el) {
+//         id = $(el).data('plate');
+//         if (isXsWidth()) {
+//             $(el).insertAfter('[data-tab="'+id+'"]');
+//         } else {
+//             $(el).appendTo(wrap);
+//         }
+//     });
+//
+//     tab.on('click', function() {
+//         if (isXsWidth()) {
+//             this.scrollIntoView({behavior: "smooth"});
+//         }
+//     });
+// }
 
  // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
  function srollToId() {

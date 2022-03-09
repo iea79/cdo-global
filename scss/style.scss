@@ -167,29 +167,29 @@
         font-size: 1.375em;
         line-height: 148.8%;
         letter-spacing: 0.08em;
-        text-transform: uppercase;
-        cursor: pointer;
-        user-select: none;
-        padding: 0.8em 1.2em;
+        // cursor: pointer;
+        // user-select: none;
+        padding: 0.3em 1.2em;
         color: #2B2C34;
         transition: color 0.3s;
 
         @media (min-width: 768px) {
+            text-transform: uppercase;
             padding: 0.48em 0;
         }
 
-        &:hover {
-            color: #74D414;
-        }
+        // &:hover {
+        //     color: #74D414;
+        // }
 
-        &.active {
+        b {
             color: #74D414;
             font-weight: 600;
         }
     }
 
     &__left {
-        padding: 0.3em 0;
+        padding: 1em 0;
 
         @media (min-width: 768px) {
             border-right: 1px solid #CECECE;
@@ -208,7 +208,7 @@
     }
 
     &__plate {
-        display: none;
+        display: flex;
         width: 100%;
         flex-wrap: wrap;
         background: #EDEDED;
@@ -219,9 +219,9 @@
             border: 0;
         }
 
-        &.active {
-            display: flex;
-        }
+        // &.active {
+        //     display: flex;
+        // }
 
         &Item {
             width: 50%;
