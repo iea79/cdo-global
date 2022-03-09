@@ -47,6 +47,7 @@
 @import "./singleComponents/examples";
 
 @import "./singleComponents/background";
+@import "./singleComponents/recall";
 @import "./singleComponents/ourServices";
 @import "./singleComponents/singleTask";
 
@@ -323,4 +324,8 @@
         }
     }
 
+}
+
+.fancybox-bg {
+    background-color: rgba(#3F4353 , 0.4);
 }
