@@ -1,0 +1,165 @@
+.contacts {
+    min-height: 47.25em;
+    position: relative;
+    overflow: hidden;
+
+    &__wrap {
+
+        @media (min-width: 768px) {
+            margin-top: 1.5em;
+            padding-right: 45em;
+        }
+    }
+
+    &__content {
+        font-weight: 500;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+        @media (min-width: 768px) {
+            margin-bottom: 4em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+
+    }
+
+    &__title {
+        color: $second_color;
+        margin-bottom: 1em;
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+    &__phone {
+        margin-bottom: 0.75em;
+        color: $second_color;
+    }
+
+    &__mail {
+        margin-bottom: 0.75em;
+        color: $second_color;
+    }
+
+    &__adress {
+        margin-bottom: 1em;
+    }
+
+    &__link {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        color: #5AB302;
+
+        &.active,
+        &:hover {
+            .link-arrow {
+                width: 4.375em;
+            }
+        }
+    }
+
+    &__map {
+        // width: 100%;
+        margin: 0 -1em;
+        @media (min-width: 768px) {
+            margin: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+        }
+    }
+
+}
+
+.link-arrow {
+    background: $color_success;
+    position: relative;
+    margin-left: 1.5625em;
+    width: 1.5em;
+    height: 0.0625em;
+    transition: width 0.3s;
+
+    &:after,
+    &:before {
+        content: '';
+        background: $color_success;
+        position: absolute;
+        right: 0;
+        width: 0.375em;
+        height: 0.0625em;
+
+    }
+
+    &:before {
+        top: -0.125em;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        top: 0.125em;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+.map {
+    width: 100%;
+    height: 28em;
+    @media (min-width: 768px) {
+        height: 47em;
+
+    }
+}
+
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
+
+.contactsForm {
+    margin-top: -0.25em;
+    position: relative;
+    background-color: $color_success;
+    overflow: hidden;
+    padding: 3em 0 9em;
+    @media (min-width: 768px) {
+        padding: 11.875em 0;
+
+    }
+
+    &__inner {
+        @media (min-width: 768px) {
+            padding-right: 27em;
+        }
+
+        .form__button {
+            bottom: 4.5em;
+            left: 3.52em;
+
+            @media (min-width: 768px) {
+                left: auto;
+                top: 26.5em;
+                right: 11em;
+
+            }
+        }
+    }
+
+}
