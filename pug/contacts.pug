@@ -1,0 +1,62 @@
+extends layout/layout.pug
+
+block content
+
+    // begin contacts
+    section#contacts.contacts
+        .container_center
+            +breadcrumb(['Главная', 'Контакты'])
+            .contacts__wrap
+                .contacts__content
+
+                    .contacts__item
+                        span.contacts__title Москва
+                        a.contacts__phone(href="tel:+7(495) 777-37-93") +7 (495) 777-37-93
+                        a.contacts__mail(href="mailto:info@cdo-global.ru") info@cdo-global.ru
+                        span.contacts__adres 119019, г. Москва, ул. Новый Арбат, д.11, стр.1, офис. 23
+                        a.contacts__link.active(href="#" class="goto" data-goto="moscow" title="Москва") Смотреть на карте
+                            span.link-arrow
+
+                    .contacts__item
+                        span.contacts__title Рязань
+                        a.contacts__phone(href="tel:+7 (495) 777-37-93") +7 (495) 777-37-93
+                        a.contacts__mail(href="mailto:info@cdo-global.ru") info@cdo-global.ru
+                        span.contacts__adres 390000, г. Рязань, ул. Право-Лыбедская, д. 40, оф. 32
+                        a.contacts__link(href="#" class="goto" data-goto="ryazan" title="ryazan") Смотреть на карте
+                            span.link-arrow
+
+                    //- #result
+                .contacts__map
+                    .map#map
+    // end contacts
+
+    // begin contactsForm
+    section#contactsForm.contactsForm
+        .container_center
+            h2.form__title У вас есть вопросы? давайте обусудим
+            .contactsForm__inner
+                form.form.form_grid(action="")
+                    .form__row.form__row_full
+                        label(for="name") Имя
+                        input(type="text" id="name")
+                    .form__row
+                        label(for="email") Email
+                        input(type="email" id="email")
+                    .form__row
+                        label(for="phone") Телефон
+                        input(type="number" id="phone")
+                    .form__row.form__row_full
+                        label(for="question") Вопрос
+                        textarea(type="text" id="question")
+                    .form__row.form__row_full
+                        .form__text
+                            .form__img
+                                img(src="img/lock.svg", alt="alt")
+                            span Мы безопасно храним данные и никому их не передаём, вот 
+                                a(href="#" target="_blank") условия.
+                    .form__button
+                        .button
+                            button.btn.btn_lg(type="submit") 
+                                span Отправить запрос
+
+    // end contactsForm
