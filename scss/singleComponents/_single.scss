@@ -6,8 +6,10 @@
     &__header {
         background: radial-gradient(38.6% 73.42% at 50.76% 50%, #F7F7F7 0%, #EDEDED 100%);
         margin-bottom: 1.5em;
+
         @media (min-width: 768px) {
             margin-bottom: 4.375em;
+            min-height: 23em;
         }
     }
 
@@ -17,9 +19,9 @@
 
         @media (min-width: 768px) {
             display: flex;
+            align-items: center;
             padding-top: 1.232em;
             padding-bottom: 5.375em;
-
         }
 
         .image {
@@ -30,6 +32,7 @@
             @media (min-width: 768px) {
                 width: 19.125em;
                 height: 7.25em;
+                margin-right: 4.75em;
             }
 
             img {
@@ -42,31 +45,41 @@
             text-transform: uppercase;
             font-weight: 400;
             color: $second_color;
-            line-height: 1.48;
+            line-height: 1.4;
             letter-spacing: 0.08em;
             font-size: 1.5em;
             margin-top: 1em;
 
             @media (min-width: 768px) {
                 margin-top: 0;
-                font-size: 2.875em;
-                margin-left: 1.63em;
+                font-size: 2.75em;
             }
         }
+
+        // start singleService
+        &_service {
+            .image {
+                width: 5em;
+                height: 5em;
+
+                @media (min-width: 768px) {
+                    width: 7.5em;
+                    height: 7.5em;
+                }
+            }
+        }
+        // end singleService
     }
 
     &__main {
-        // padding-top: 1.5em;
-        // padding-bottom: 3em;
 
         @media (min-width: 768px) {
             display: flex;
             flex-direction: row-reverse;
-            // padding-top: 4.375em;
-            // padding-bottom: 3.125em;
+
         }
     }
-    //
+
     &__form {
         padding-bottom: 6.25em;
         padding-top: 3.125em;

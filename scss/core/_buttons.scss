@@ -78,6 +78,55 @@
 	&:active,
 	&:focus {}
 
+	&_md {
+		font-size: 1em;
+
+		// span {
+		// 	// text-transform: uppercase;
+		// 	// font-weight: 500;
+		// 	// display: inline-block;
+		// 	// max-width: 6em;
+		// 	// color: #262F1D;
+		//
+		// 	text-align: center;
+		// 	display: inline-block;
+		// 	width: 6em;
+		// 	text-transform: uppercase;
+		// 	line-height: 1.2;
+		// 	font-weight: 500;
+		// }
+
+		&:before {
+			top: -16em;
+			left: -16em;
+			width: 30em;
+			height: 30em;
+
+			@media (min-width: 768px) {
+				top: -23.2em;
+				left: -23.2em;
+				width: 37.5em;
+				height: 37.5em;
+
+			}
+		}
+
+		&:after {
+			top: -2em;
+			left: -2em;
+			width: 7em;
+			height: 7em;
+
+			@media (min-width: 768px) {
+				top: -4em;
+				left: -5.1em;
+				width: 10em;
+				height: 10em;
+			}
+
+		}
+	}
+
 	&_lg {
 		&:before {
 			top: -16em;
@@ -114,24 +163,6 @@
 	&_success {
 		color: $color_withe;
 
-		font-size: 1em;
-
-		span {
-			display: inline-block;
-			width: 4em;
-			text-transform: uppercase;
-			line-height: 1.2;
-			font-weight: 500;
-		}
-
-		&:after,
-		&:before {
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%)scale(1);
-
-		}
-
 		&:before {
 			width: 27.625em;
 			height: 27.625em;
@@ -143,6 +174,37 @@
 			height: 8.25em;
 			background-image: none;
 			background-color: $color_success;
+		}
+
+	}
+
+	&_white {
+		color: #262F1D;
+
+		&:after {
+			background-image: none;
+			background-color: $color_withe;
+		}
+
+	}
+
+	&_center {
+		font-size: 1em;
+
+		span {
+			text-align: center;
+			display: inline-block;
+			width: 6em;
+			text-transform: uppercase;
+			line-height: 1.2;
+			font-weight: 500;
+		}
+
+		&:after,
+		&:before {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%)scale(1);
 		}
 
 		@media (min-width: 768px) {
@@ -157,4 +219,12 @@
 		}
 	}
 
+}
+
+// центрирование кнопок размера md
+@media (min-width: 768px) {
+	.form__button_md {
+		top: 15em;
+		right: 11em;
+	}
 }

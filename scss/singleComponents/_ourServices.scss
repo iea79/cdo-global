@@ -2,6 +2,8 @@
     &__content {
         @media (min-width: 768px) {
             display: flex;
+            padding-top: 0.45em;
+            /* 6/16 */
         }
     }
 
@@ -29,8 +31,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 2.188em;
-        height: 2.188em;
+        width: 2.1215em;
+        height: 2.1215em;
         border-radius: 50%;
         font-size: 1.875em;
         font-weight: 600;
@@ -56,11 +58,7 @@
 
     li {
         line-height: 1.36;
-        margin-bottom: 0.5em;
-
-        @media (min-width: 768px) {
-            margin-bottom: 0.824em;
-        }
+        margin-bottom: 0.489em;
 
         &:last-child {
             margin-bottom: 0;

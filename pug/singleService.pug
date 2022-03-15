@@ -2,8 +2,16 @@ extends layout/layout.pug
 
 block content
     .single
+        .single__header
+            .container_center
+                +breadcrumb(['Главная', 'Продукты', 'CDO.ЭИОС'])
+
+                .single__title.single__title_service
+                    .image
+                        img(src="img/home-list-5.svg", alt="alt")
+                    h1 1с-разработка
+
         .container_center
-            +breadcrumb(['Главная', 'Продукты', 'CDO.ЭИОС'])
 
             .single__main
                 .aside.aside_lg
@@ -26,15 +34,6 @@ block content
                             a(href="#") Нейросети
 
                 .single__content
-
-                    // begin background
-                    section#background.background
-                        .background__bg.background__bg_flex(style="background-image: url('img/single-bg-1.jpg')")
-                            .background__content
-                                h1.background__title 1с-разработка
-                    // end background
-
-
 
                     h2 Описание услуги
 
@@ -69,6 +68,27 @@ block content
         // begin single__form
         section#single__form.single__form.section
             .container_center
-                +form
+                .form__inner
+                    h2.form__title Напишите нам
+                    form.form.form_grid(action="")
+                        .form__row.form__row_full
+                            label(for="name") Имя
+                            input(type="text" id="name")
+                        .form__row
+                            label(for="email") Email
+                            input(type="email" id="email")
+                        .form__row
+                            label(for="phone") Телефон
+                            input(type="number" id="phone")
+                        .form__row.form__row_full
+                            .form__text
+                                .form__img
+                                    img(src="img/lock.svg", alt="alt")
+                                span Мы безопасно храним данные и никому их не передаём, вот 
+                                    a(href="#" target="_blank") условия.
+                        .form__button.form__button_md
+                            .button
+                                button.btn.btn_md.btn_center.btn_white(type="submit") 
+                                    span Отправить запрос
 
         // end single__form
