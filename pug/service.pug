@@ -1,0 +1,35 @@
+extends layout/layout.pug
+
+block content
+    .page
+        .container_center
+            +breadcrumb(['Главная', 'Услуги'])
+
+            h1.page__title Мы предлагаем
+
+            // begin service
+            section#service.service.section
+                .serviceGrid
+                    each grid in [ {img: '1', name: 'АУДИТ'}, {img: '2', name: '1с-разработка'}, {img: '3', name: 'Web-разработка'}, {img: '4', name: 'Moodle-разработка'}, {img: '5', name: 'МОБИЛЬНАЯ разработка'}, {img: '6', name: 'Сопровождение'}, {img: '7', name: 'Консалтинг'}, {img: '8', name: 'Кибер-безопасность '}, {img: '9', name: 'Нейросети'},  ]
+
+                        .serviceGrid__item
+                            a(href="#").serviceGrid__link
+                                .serviceGrid__img
+                                    img(src="img/moreProduct-"+grid.img+".svg", alt="alt")
+                                .serviceGrid__name
+                                    span=grid.name
+                                .serviceGrid__text Портал для организации дистанционного обучения и взаимодействия обучающихся, преподавателей и сотрудников университета.
+
+
+            // end service
+
+            // begin serviceForm
+            section#serviceForm.serviceForm.section
+                +form
+
+            // end serviceForm
+
+
+
+
+

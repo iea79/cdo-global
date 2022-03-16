@@ -1,0 +1,74 @@
+.service {
+    padding-top: 0;
+}
+
+.serviceGrid {
+    @media (min-width: 768px) {
+        @include grid(3);
+    }
+
+    &__item {
+        margin-bottom: 1em;
+        background-color: #F3F3F3;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        border: 1px solid #CECECE;
+        padding: 1.875em;
+
+        text-decoration: none;
+
+        min-height: 15em;
+        @media (min-width: 768px) {
+            min-height: 20em;
+        }
+    }
+
+    &__img {
+        width: 4em;
+        height: 4em;
+        margin-bottom: 1.25em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 1.875em;
+
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__name {
+        color: $main_color;
+        margin-bottom: 1em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.25em;
+        }
+
+        span {
+            font-size: 1.375em;
+            line-height: 1.48;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+    }
+
+    &__text {
+        color: $second_color;
+        font-size: 1em;
+        line-height: 1.36;
+
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+
+        }
+    }
+
+}
+
+.serviceForm {
+    padding-bottom: 0;
+}
