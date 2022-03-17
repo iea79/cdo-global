@@ -3397,7 +3397,7 @@ html[data-browser*=flexible] .grid_nowrap {
     width: calc(33.3% - 1em);
   }
 }
-.singlePoints__num {
+.singlePoints .singlePoint__num {
   font-size: 3.5em;
   line-height: 1;
   letter-spacing: 0.08em;
