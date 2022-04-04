@@ -6,7 +6,7 @@ header.header
         .navbar__toggle
         nav.nav.header__nav
             ul.navbar
-                each navLink in [{name: 'О нас', href: ''},{name: 'Продукты', href: ''},{name: 'Услуги', href: ''},{name: 'Проекты', href: ''},{name: 'Новости', href: ''},{name: 'Контакты', href: ''}]
+                each navLink in [{name: 'О нас', href: 'about.html'},{name: 'Продукты', href: ''},{name: 'Услуги', href: ''},{name: 'Проекты', href: ''},{name: 'Новости', href: ''},{name: 'Контакты', href: ''}]
                     li.navbar__item
                         a.navbar__link(href= navLink.href)= navLink.name
 

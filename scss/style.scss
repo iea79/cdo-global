@@ -331,3 +331,284 @@
 .fancybox-bg {
     background-color: rgba(#3F4353 , 0.4);
 }
+
+.about.page {
+    &:after {
+        display: none;
+    }
+}
+
+.aboutDescr {
+    margin: 3em 0;
+    @media (min-width: 768px) {
+        margin: 6em 0;
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        flex: none;
+        line-height: 1.5;
+        margin-bottom: 3em;
+
+        @media (min-width: 768px) {
+            width: 45.3125em;
+            margin-right: 1.875em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__list {
+        @media (min-width: 768px) {
+            min-width: 0;
+            flex-grow: 1;
+            display: flex;
+            margin: 0 -0.9375em;
+        }
+    }
+
+    &__item {
+        margin: 0 0 0.9375em;
+        padding: 2.5em 1.875em;
+        text-align: center;
+        background: #8CD93F;
+        color: $color_withe;
+
+        @media (min-width: 768px) {
+            width: calc(33.3% - 1.875em);
+            margin: 0.9375em;
+            padding: 2.5em 1.875em;
+        }
+    }
+
+    &__num {
+        font-size: 3.5em;
+        line-height: 1;
+        margin-bottom: 0.2em;
+    }
+
+    &__name {
+        line-height: 1.25;
+    }
+
+}
+
+.aboutSuccess {
+    margin: 4em 0 0;
+
+    @media (min-width: 768px) {
+        margin: 6em 0 2.5em;
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        margin-bottom: 1.7em;
+
+        @media (min-width: 768px) {
+            width: 49%;
+            margin-right: 90px;
+            margin-bottom: 0;
+            flex: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__descr {
+        padding-top: 0;
+        padding-bottom: 1.5em;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.3em;
+        line-height: 1.4;
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 0;
+
+        @media (min-width: 768px) {
+            font-size: 2.25em;
+        }
+    }
+
+    &__num {
+        font-size: 2.85em;
+        margin-right: 0.3em;
+    }
+
+    &__text {
+        line-height: 1.5;
+    }
+
+}
+
+.aboutAchievements {
+    @media (min-width: 768px) {
+        padding-bottom: 2.3em;
+    }
+
+    &__list {
+        margin: 2em 0 0;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2.3em 0 1em -1.875em;
+        }
+    }
+
+    &__item {
+        margin-bottom: 2em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            padding-left: 1.875em;
+            margin-bottom: 0;
+            width: 50%;
+        }
+    }
+
+    &__doc {
+        flex: none;
+        width: 12.1875em;
+        padding: 0.75em 0.4375em;
+        background: #FFFFFF;
+        box-shadow: 0 20px 80px rgba(0, 0, 0, 0.08);
+        margin: auto;
+
+        @media (min-width: 768px) {
+            margin: 0;
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    &__name {
+        background: radial-gradient(38.6% 73.42% at 50.76% 50%, #F7F7F7 0%, #EDEDED 100%);
+        padding: 1em;
+        font-size: 1.5em;
+        line-height: 1.39;
+        letter-spacing: 0.08em;
+        font-weight: 500;
+        color: #3F4353;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+            height: 8.57em;
+            padding: 2.75em 2.75em 2.65em 1.75em;
+            flex-grow: 1;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+.aboutClient {
+    margin: 2em 0;
+    @media (min-width: 768px) {
+        margin: 2.1em 0;
+    }
+
+    .ourClients__item {
+        @media (min-width: 768px) {
+            height: 12.9em;
+        }
+    }
+}
+
+.aboutJob {
+    background: #EDEDED;
+    border: 1px solid #CECECE;
+    overflow: hidden;
+    position: relative;
+    padding: 1.3em;
+
+    @media (min-width: 768px) {
+        margin: 1.15em 0;
+        padding: 4em 6.6em 4em 4.5em;
+        min-height: 20.6em;
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__left {
+
+        @media (min-width: 768px) {
+            flex: none;
+            width: 43.25em;
+        }
+    }
+
+    &__text {
+        margin-top: 1.2em;
+        line-height: 1.5;
+        font-size: 1.125em;
+    }
+
+    &__right {
+        padding: 3em 1em 2em;
+
+        @media (min-width: 768px) {
+            padding: 2.2em 0 0;
+        }
+
+        &:before {
+            content: '';
+            width: 950px;
+            height: 950px;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            opacity: 0.3;
+            border: 1px solid #A9A9A9;
+            transform: translate(-50%, -50%);
+        }
+
+        .button {
+            @media (min-width: 768px) {
+                font-size: 0.87em;
+            }
+        }
+
+        .btn {
+            &:before {
+                @media (min-width: 768px) {
+                    font-size: 0.85em;
+                }
+            }
+        }
+    }
+
+}
