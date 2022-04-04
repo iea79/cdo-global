@@ -1,0 +1,43 @@
+extends layout/layout.pug
+
+block content
+    .page.projects
+        .container_center
+            +breadcrumb(['Главная', 'Проекты'])
+
+            h1.page__title Проекты
+
+            .filter
+                .filter__row
+                    label.filter__check
+                        input(type="checkbox" checked="")
+                        span Веб-разработка
+                    label.filter__check
+                        input(type="checkbox" checked="")
+                        span Мобильная разработка
+                    label.filter__check
+                        input(type="checkbox" checked="")
+                        span 1С разработка
+                    label.filter__check
+                        input(type="checkbox")
+                        span Разработка серверов
+
+
+            .projectsList
+                each item in [1,2,3,4,5]
+                    .projectsList__item
+                        .projectsList__img
+                            img(src="img/projects-1.jpg", alt="")
+                            .projectsList__logo
+                                img(src="img/project-logo.png", alt="")
+                            .projectsList__label CDO.ЭИОС
+                        .projectsList__name ИС управление приемной компанией и настройке ЛК
+                        .projectsList__descr АНО ДПО «Российский Международный Олимпийский университет»
+                    .projectsList__item
+                        .projectsList__img
+                            img(src="img/projects-2.png", alt="")
+                            .projectsList__logo
+                                img(src="img/project-logo.png", alt="")
+                            .projectsList__label CDO.ЭИОС
+                        .projectsList__name ИС управление 
+                        .projectsList__descr АНО ДПО «Российский университет»

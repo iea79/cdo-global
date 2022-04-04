@@ -612,3 +612,108 @@
     }
 
 }
+
+.projectsList {
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -0.9375em;
+    }
+
+    &__item {
+        margin: 0 0 2em;
+        color: $main_color;
+        text-decoration: none;
+
+        @media (min-width: 768px) {
+            width: calc(25% - 1.875em);
+            margin: 0 0.9375em 3.25em;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 19.0625em;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-bottom: 0.7em;
+
+        @media (min-width: 768px) {
+            width: 21.75em;
+            margin-bottom: 1.375em;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #101D31;
+            opacity: 0.5;
+            z-index: 1;
+            transition: opacity 0.4s;
+        }
+
+        > img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.4s;
+            transform: scale(1);
+        }
+
+        &:hover {
+            > img {
+                transform: scale(1.05);
+            }
+
+            &:after {
+                content: '';
+                opacity: 0;
+            }
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        width: 4.8125em;
+        top: 2em;
+        left: 1.375em;
+        z-index: 2;
+    }
+
+    &__label {
+        position: absolute;
+        font-size: 22px;
+        color: $color_withe;
+        padding: 1em;
+        z-index: 2;
+    }
+
+    &__name {
+        font-size: 1.375em;
+        line-height: 1.36;
+        margin-bottom: 0.2em;
+
+        @media (min-width: 768px) {
+            min-height: 2.7em;
+        }
+    }
+
+    &__descr {
+        font-size: 0.875em;
+        line-height: 1.48;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #757A8A;
+    }
+
+}
