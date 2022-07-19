@@ -21,11 +21,19 @@ block content
                             .homeScreen__video
                                 video(src="video/cdo.mp4" autoplay mute loop)
 
-                .homeScreen__points
+                //- .homeScreen__points
                     each item in [{num: '12', text: 'Лет работаем <br>с образованием'}, {num: '2', text: 'Место по России <br>в рейтинге ЦКО'}, {num: '4', text: 'Собственных продукта'}, {num: '110', text: 'Образовательных <br>учреждений нам доверяют'}, {num: '140', text: 'Проектов ежегодно'}]
                         .homeScreen__point
                             .homeScreen__num=item.num
                             .homeScreen__descr!=item.text
+                //- .homeScreen__points
+                    each item in [1,2,3]
+                        a.homeScreen__point(href="#")
+                            img(src="img/cdo-"+item+".svg", alt="")
+                .homeScreen__points
+                    each item in [1,2,3,1,2]
+                        a.homeScreen__point(href="#")
+                            img(src="img/cdo-"+item+".svg", alt="")
         .homeScreen__bottom
             .container_center
                 .homeScreen__description
