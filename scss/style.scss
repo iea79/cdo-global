@@ -715,3 +715,72 @@
     }
 
 }
+
+.servicesList {
+    margin: 4em 0 0;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 6.9375em 0 0;
+    }
+
+    &__item {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2em;
+        display: flex;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            width: calc(50% - 9em);
+            margin-right: 8.75em;
+            margin-bottom: 4.3125em;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: -1;
+                top: -1.875em;
+                right: 0;
+                bottom: -1.875em;
+                left: -2.625em;
+                border: 1px solid transparent;
+                transition: border 0.3s;
+            }
+        }
+
+        &:hover {
+            &:before {
+                border-color: #CECECE;
+            }
+        }
+    }
+
+    &__img {
+        flex: none;
+        width: 4em;
+        margin-right: 1.125em;
+
+        @media (min-width: 768px) {
+            width: 5.25em;
+        }
+
+        img {
+            display: block;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__name {
+        font-size: 1.25em;
+        line-height: 1.36;
+
+        @media (min-width: 768px) {
+            font-size: 1.375em;
+        }
+    }
+}
